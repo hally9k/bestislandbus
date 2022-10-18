@@ -7,7 +7,7 @@ interface Props {
   css: SerializedStyles
 }
 
-export const Video: React.FC<Props> = ({ videoSrcURL, videoTitle, css }) => (
+export const Video: React.FC<Props> = ({ videoSrcURL, videoTitle, css }) =>
     <iframe
       css={css}
       src={videoSrcURL}
@@ -18,4 +18,4 @@ export const Video: React.FC<Props> = ({ videoSrcURL, videoTitle, css }) => (
       height="100%"
       width="100%"
     />
-)
+

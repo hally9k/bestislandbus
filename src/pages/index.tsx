@@ -7,7 +7,15 @@ import { Layout } from '../components/layout'
 import { Button } from '../components/button'
 import { Video } from '../components/video'
 import { colorBrandPrimary, colorShadePrimary, colorBaseWhite } from '../styles/color'
-
+import bikingImg from '../images/biking.jpg'
+import beachImg from '../images/beach.jpg'
+import waterVideo from '../images/water.mp4'
+import marketImg from '../images/market.png'
+import islandsImg from '../images/islands.jpg'
+import portholeImg from '../images/porthole.jpg'
+import bedImg from '../images/bed.jpg'
+import indicatorImg from '../images/indicator.jpg'
+import gardenImg from '../images/garden.jpg'
 
 const pageStyles = {
   color: "#232129",
@@ -16,16 +24,11 @@ const pageStyles = {
 }
 
 const headerStyle = {
-  // height: '50px'
 }
 
 const logoStyle = css`
   position: absolute;
   z-index: 10;
-`
-
-const heroStyle = css`
-  width: 100%;
 `
 
 const primarySectionStyles = css`
@@ -43,10 +46,7 @@ const sectionContainerStyles = css`
 
 const dividerStyles = css`
   background-color: ${colorBrandPrimary};
-  /* height: 3rem; */
-
   padding: 1rem;
-
   color: ${colorBaseWhite};
 `
 
@@ -73,43 +73,121 @@ const tertiarySectionStyles = css`
   background-color: ${colorShadePrimary};
   width: calc(100% - 300px);
 `
-const gallerySection = css`
-  display: flex;
-  justify-items: space-evenly;
-  height: 480px; 
-  width: 100%;
-  overflow: hidden;
+
+const quartinarySectionStyles = css`
+  padding: 3rem;
+  width: calc(100% - 300px);
 `
 
 const videoStyles = css`
-  box-sizing: border-box;
-    /* height: 56.25vw; */
-    left: 50%;
-    min-height: 100%;
-    min-width: 100%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    top: 50%;
-    /* width: 177.77777778vh; */
+  flex-grow: 1; border: none; margin: 0; padding: 0;
 `
+
 const videoContainerStyles = css`
-  flex-grow: 1;
-  background: #eee;
-    height: 100%;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
+  display: flex; width: 100%; height: 100%; flex-direction: column; background-color: blue; overflow: hidden;
 `
 
 const imageContainerStyles = css`
   height: 100%;
   width: auto;
-  overflow: hidden
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `
 
-const galleryImageStyles = css`
-  height: 100%;
-  width: auto;
+const imageBikingStyles = css`
+  background-image: url(${bikingImg});
+
+  ${imageContainerStyles}
+`
+
+const imageBeachStyles = css`
+  background-image: url(${beachImg});
+
+  ${imageContainerStyles}
+`
+
+const gallerySection = css`
+  display: grid;
+  height: 480px; 
+  width: 100%;
+  overflow: hidden;
+`
+
+const galleryVideoHackSection = css`
+  ${gallerySection}
+  grid-template-columns: 853px 1fr 1fr;
+`
+const galleryTripleSection = css`
+  ${gallerySection}
+  grid-template-columns: 1fr 1fr 1fr;
+`
+const galleryDoubleSection = css`
+  ${gallerySection}
+  grid-template-columns: 1fr 1fr;
+`
+const imageMarketStyles = css`
+  background-image: url(${marketImg});
+
+  ${imageContainerStyles}
+`
+const imageIslandsStyles = css`
+  background-image: url(${islandsImg});
+
+  ${imageContainerStyles}
+`
+const imagePortholeStyles = css`
+  background-image: url(${portholeImg});
+
+  ${imageContainerStyles}
+`
+const imageBedStyles = css`
+  background-image: url(${bedImg});
+
+  ${imageContainerStyles}
+`
+const imageIndicatorStyles = css`
+  background-image: url(${indicatorImg});
+
+  ${imageContainerStyles}
+`
+const imageGardenStyles = css`
+  background-image: url(${gardenImg});
+
+  ${imageContainerStyles}
+`
+const contactPanel = css`
+  background-color: ${colorBrandPrimary};
+  color: white;
+`
+
+const phoneNumberStyles = css`
+  :before {
+    content: "";
+    display: block;
+    background: url("../images/mobile.png") no-repeat;
+    width: 40px;
+    height: 60px;
+    float: left;
+    margin: 0 6px 0 0;
+  }
+`
+
+const emailStyles = css`
+  :before {
+    content: "";
+    display: block;
+    background: url("../images/email.png") no-repeat;
+    width: 40px;
+    height: 20px;
+    float: left;
+    margin: 0 6px 0 0;
+  }
+`
+
+const footerStyles = css`
+  height: 100px;
 `
 
 const sendEquiry: React.MouseEventHandler<HTMLButtonElement> = (event) => {
@@ -174,21 +252,148 @@ to arrival
 ride the bike trail to Rabbit Island
 or kayak up the estuary</h2>
       </section>
-      <section css={gallerySection}>
+      <section css={galleryVideoHackSection}>
         <div css={videoContainerStyles}>
           <Video
             css={videoStyles}
-            videoSrcURL='https://player.vimeo.com/video/760665688?h=8f12acdd75&amp;badge=0&amp;autopause=0&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;background=1&amp;player_id=0&amp;app_id=58479'
+            videoSrcURL={waterVideo}
             videoTitle='Water'
           ></Video>
         </div>
-        <div css={imageContainerStyles}>
-          <StaticImage src="../images/biking.jpg" alt="logo" css={galleryImageStyles} width={400}></StaticImage>
+        <div css={imageBikingStyles}>
         </div>
-        <div css={imageContainerStyles}>
-          <StaticImage src="../images/beach.jpg" alt="logo" css={galleryImageStyles} width={300}></StaticImage>
+        <div css={imageBeachStyles}>
         </div>
       </section>
+      <div css={dividerStyles}>
+        <h2 css={dividertextStyles}>our local area</h2>
+      </div>
+      <section css={sectionContainerStyles}>
+        <section css={tertiarySectionStyles}>
+          <p>Nelson really is a buzzing, vibrant town, compact enough to ramble around over a long weekend but with lots more further afield. Spend a day in the Abel Tasman National Park with its turquoise waters and easy walking trail, head south to the Nelson Lakes or explore the local wineries and breweries.
+take time out to explore
+nelsontasman.nz
+Hopping in one of our kayaks and paddling up the the estuary is a great way to start the day! You will see a variety of wading birds including the rare White Heron if you’re lucky and possibly a stingray on an out-going tide. The Great Taste Trail runs close by,
+a cruisy bike trail that takes you across swing bridges and through farmland and on towards Rabbit island, where you can take the ferry across to Mapua for lunch.
+          </p>
+        </section>
+        <aside css={asideStyles}>
+          <StaticImage src="../images/logo.svg" alt="logo" height={200} css={logoStyle}></StaticImage>
+        </aside>
+      </section>
+      <section css={galleryTripleSection}>
+        <div css={imageMarketStyles}>
+        </div>
+        <div css={imageIslandsStyles}>
+        </div>
+        <div css={imagePortholeStyles}>
+        </div>
+      </section>
+      <section css={sectionContainerStyles}>
+        <section css={quartinarySectionStyles}>
+          <p>a few ideas to get you started
+Abel Tasman National Park
+Suter Gallery and cafe in Nelson
+Founders Heritage Park
+Cable Bay Adventure Park
+Miyazu Japanese Gardens and Queens Gardens in Nelson Rabbit Island beach
+Mapua Wharf...ferry to rabbit island
+Takaka in Golden Bay
+Connings Food Market
+The Playhouse Cafe and theatre
+Local markets Nelson/Motueka
+          </p>
+        </section>
+        <aside css={asideStyles}>
+          <StaticImage src="../images/logo.svg" alt="logo" height={200} css={logoStyle}></StaticImage>
+        </aside>
+      </section>
+      <div css={dividerStyles}>
+        <h2 css={dividertextStyles}>booking your stay</h2>
+      </div>
+      <section css={sectionContainerStyles}>
+        <section css={quartinarySectionStyles}>
+          <p>You can book your Best Island Bus stay here
+          </p>
+          <Button onClick={sendEquiry} text="send an enquiry" />
+        </section>
+        <aside css={asideStyles}>
+        </aside>
+      </section>
+
+      <section css={sectionContainerStyles}>
+        <section css={tertiarySectionStyles}>
+          <p>We manage our bookings and enquiries personally. We endeavour to be in touch as soon as possible.
+There are discounted rates for longer stays. All reservations are subject to confirmation.
+Payment
+Once your booking is agreed we will send you an invoice with all the details
+You can pay for your accommodation online with: • Credit card through PayPal
+• Direct Credit - NZ Bank account required Tariffs
+$225/night. Minimum two nights booking.
+Please be aware that The Best Island Bus is only available from October 1st - June 30th every year.
+Unfortunately there is no disabled access and we are unable to cater for pets. We can cater for one extra person;
+please contact us for further details.
+Arrival/Departure times
+Check in time 2pm
+Check out time 11am
+If you need to come earlier or leave later let us know and we’ll see what we can do.
+Deposits & Payment
+A 50% deposit is required to secure your booking.
+The full balance payment is required 14 days prior to arrival.
+Cancellations*
+Cancellations within 28 days of arrival date 50% of deposit to be retained
+Cancellation within 21 days of arrival date 100% of deposit to be retained
+* Any transaction fees will be deducted from reimbursements
+          </p>
+        </section>
+        <aside css={asideStyles}>
+          <StaticImage src="../images/logo.svg" alt="logo" height={200} css={logoStyle}></StaticImage>
+        </aside>
+      </section>
+      <section css={galleryDoubleSection}>
+        <div css={imageBedStyles}>
+        </div>
+        <div css={imageIndicatorStyles}>
+        </div>
+      </section>
+      <div css={dividerStyles}>
+        <h2 css={dividertextStyles}>guest book</h2>
+      </div>
+      <section css={sectionContainerStyles}>
+        <section css={quartinarySectionStyles}>
+          <p>"Awesome. Relaxing, stunning place to stay.
+The estuary with the mountains in the distance is a great view to have over brekky. We would recommend the Best Island Bus to anyone we know. Clare & Simon made us feel so welcome. Thankyou so much. “
+Tania Auckland"
+          </p>
+        </section>
+        <aside css={asideStyles}>
+        </aside>
+      </section>
+      <div css={dividerStyles}>
+        <h2 css={dividertextStyles}>finding us</h2>
+      </div>
+      <section css={sectionContainerStyles}>
+        <section css={primarySectionStyles}>
+          <StaticImage src="../images/map.jpg" alt="map" height={200}></StaticImage>
+        </section>
+        <a href="https://goo.gl/maps/8hjrQeo9gzhoay5G7">google link for map</a>
+        <a href="https:/instagram.com/bestislandbus" ></a>
+      </section>
+      <section css={galleryDoubleSection}>
+        <div css={contactPanel}>
+          <h4>Get in touch to find out more</h4>
+          <div css={emailStyles}><p>relax.bestislandbus.nz</p></div>
+          <div css={phoneNumberStyles}>
+            <div >
+              <p>Simon 0064 21 775 806</p>
+              <p>Clare 0064 21 222 8396</p>
+            </div>
+          </div>
+          <a>www.bestislandbus.nz</a>
+        </div>
+        <div css={imageGardenStyles}></div>
+      </section>
+      <footer css={footerStyles}></footer>
     </main>
   </Layout>
 
