@@ -70,6 +70,10 @@ const primarySectionStyles = css`
   font-size: 3rem;
   font-family: 'GFS Didot', serif;
 
+  a {
+    font-size: 1.5rem;
+  }
+
   @media (max-width: 1225px) {
     font-size: 2rem;
     padding: 1.5rem 3rem;
@@ -126,18 +130,18 @@ const whatWeOfferSectionStyles = css`
 const primaryBrandHeadingStyles = css`
   font-family: 'GFS Didot', serif;
   color: ${colorBrandPrimary};
-  font-size: 3rem;
+  font-size: 5rem;
 
   @media (max-width: 1200px) {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   @media (max-width: 960px) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   @media (max-width: 750px) {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 `
 
@@ -313,6 +317,29 @@ const tertiarySectionStyles = css`
   @media (max-width: 960px) {
     width: 100%;
   }
+
+  font-size: 3rem;
+
+  > * {
+      font-weight: 200;
+      font-size: 2rem;
+
+      @media (max-width: 1200px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 960px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 715px) {
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 410px) {
+        font-size: 1rem;
+      }
+    }
 `
 
 const accomodationSectionTextStyles = css`
@@ -348,6 +375,33 @@ const accomodationSectionTextStyles = css`
 const quartinarySectionStyles = css`
   padding: 3rem;
   width: calc(100% - 300px);
+
+  @media (max-width: 960px) {
+    width: 100%;
+  }
+
+  font-size: 3rem;
+
+  > * {
+      font-weight: 200;
+      font-size: 2rem;
+
+      @media (max-width: 1200px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 960px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 715px) {
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 410px) {
+        font-size: 1rem;
+      }
+    }
 `
 
 const videoStyles = css`
@@ -397,6 +451,10 @@ const galleryTripleSection = css`
 const galleryDoubleSection = css`
   ${gallerySection}
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
 `
 const imageMarketStyles = css`
   background-image: url(${marketImg});
@@ -429,36 +487,176 @@ const imageGardenStyles = css`
   ${imageContainerStyles}
 `
 const contactPanel = css`
+  padding: 3rem;
+  font-size: 2rem;
+
   background-color: ${colorBrandPrimary};
   color: white;
+
+  @media (max-width: 1400px) {
+    padding: 2rem 4rem;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 1.6rem 3.2rem;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 960px) {
+    padding: 1.5rem 3rem;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 715px) {
+    padding: 1.2rem 2.4rem;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 410px) {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
 `
 
 const phoneNumberStyles = css`
-  :before {
-    content: "";
-    display: block;
-    background: url("../images/mobile.png") no-repeat;
-    width: 40px;
-    height: 60px;
-    float: left;
-    margin: 0 6px 0 0;
+  display: flex;
+
+  > div > p {
+    margin: 0;
   }
 `
 
+const phoneIconStyles = css`
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+`
+
 const emailStyles = css`
-  :before {
-    content: "";
-    display: block;
-    background: url("../images/email.png") no-repeat;
-    width: 40px;
-    height: 20px;
-    float: left;
-    margin: 0 6px 0 0;
-  }
+`
+
+const emailIconStyles = css`
+  height: 40px;
+  width: 40px;
+  top: -5px;
+  margin-right: 10px;
 `
 
 const footerStyles = css`
   height: 100px;
+`
+
+const infoTitleStyles = css`
+  color: ${colorBrandPrimary};
+  border: 1px ${colorBrandPrimary} solid;
+  border-left: none;
+  background-color: ${colorBaseWhite};
+  padding: 0.2rem 1rem 0.2rem 3rem;
+  width: fit-content;
+  margin: 2rem 0 1rem;
+`
+
+const infoBodyStyles = css`
+  padding: 1rem 3rem;
+`
+
+const guestBookEntryStyle = css`
+  font-weight: 500;
+
+  > p > p {
+    position: relative;
+    padding-left: 3.2rem;
+    top: 35px;
+  }
+
+  > p > .quotes {
+    position: absolute;
+    font-size: 7rem;
+    font-weight: 900;
+
+    @media (max-width: 1200px) {
+        font-size: 6rem;
+      }
+
+      @media (max-width: 960px) {
+        font-size: 5.5rem;
+      }
+
+      @media (max-width: 715px) {
+        font-size: 4.5rem;
+      }
+
+      @media (max-width: 410px) {
+        font-size: 4rem;
+      }
+  }
+
+  .guest-name {
+    margin-top: 7rem;
+  }
+`
+
+const mapStyles = css`
+  border: 1px black solid;
+  /* height: 8rem; */
+
+  > div {
+    height: 100%
+  }
+`
+
+const mapContainerStyles = css`
+  flex-grow: 1;
+`
+
+const mapInstaContainer = css`
+  display: flex;
+  padding: 3rem;
+
+  @media (max-width: 1400px) {
+    padding: 2rem 4rem;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 1.6rem 3.2rem;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 960px) {
+    padding: 1.5rem 3rem;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 715px) {
+    padding: 1.2rem 2.4rem;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 410px) {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+`
+
+const instaContainerStyles = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: 10rem;
+
+  padding: 4rem 0;
+`
+
+const instaLogoStyles = css`
+  height: 4rem;
+  width: 4rem;
+
+  > div {
+    height: 100%
+  }
 `
 
 const sendEquiry: React.MouseEventHandler<HTMLButtonElement> = (event) => {
@@ -576,12 +774,11 @@ The bus is situated at the end of our large garden in a secluded corner with its
           <p><a href="https://www.google.com/search?client=safa- ri&rls=en&q=suter+gallery&ie=UTF-8&oe=UTF-8">Suter Gallery and cafe in Nelson</a></p>
           <p><a href="https://www.google.com/search?client=safa- ri&rls=en&q=founders+park&ie=UTF-8&oe=UTF-8">Founders Heritage Park</a></p>
           <p><a href="https://www.google.com/search?cli- ent=safari&rls=en&q=cable+bay+adven- ture+park&ie=UTF-8&oe=UTF-8">Cable Bay Adventure Park</a></p>
-          <p><a>Miyazu Japanese Gardens and Queens Gardens in Nelson Rabbit Island beach</a></p>
-          <p><a>Miyazu Japanese Gardens and Queens Gardens in Nelson Rabbit Island beach</a></p>
-          <p><a>Mapua Wharf...ferry to rabbit island</a></p>
+          <p><a href="https://www.google.com/search?client=safa- ri&rls=en&q=Miyazu+Japanese+garden+nel- son+nz&ie=UTF-8&oe=UTF-8">Miyazu Japanese Gardens and Queens Gardens in Nelson Rabbit Island beach</a></p>
+          <p><a href="https://www.mapuawharf.co.nz">Mapua Wharf</a> ...ferry to rabbit island</p>
           <p><a>Takaka in Golden Bay</a></p>
-          <p><a>Connings Food Market</a></p>
-          <p><a>The Playhouse Cafe and theatre</a></p>
+          <p><a href="https://www.google.com/search?client=sa- fari&rls=en&q=connings+food+mar- ket&ie=UTF-8&oe=UTF-8">Connings Food Market</a></p>
+          <p><a href="https://playhousecafe.co.nz">The Playhouse Cafe and theatre</a></p>
           <p><a>Local markets Nelson/Motueka</a></p>
         </section>
         <aside css={asideStyles}>
@@ -595,7 +792,7 @@ The bus is situated at the end of our large garden in a secluded corner with its
         <section css={quartinarySectionStyles}>
           <p>You can book your Best Island Bus stay here
           </p>
-          <Button onClick={sendEquiry} text="send an enquiry" />
+          <Button onClick={sendEquiry} styles={enquiryButtonStyles} text="send an enquiry" />
         </section>
         <aside css={asideStyles}>
         </aside>
@@ -603,28 +800,48 @@ The bus is situated at the end of our large garden in a secluded corner with its
 
       <section css={sectionContainerStyles}>
         <section css={tertiarySectionStyles}>
-          <p>We manage our bookings and enquiries personally. We endeavour to be in touch as soon as possible.
-There are discounted rates for longer stays. All reservations are subject to confirmation.
-Payment
-Once your booking is agreed we will send you an invoice with all the details
-You can pay for your accommodation online with: • Credit card through PayPal
-• Direct Credit - NZ Bank account required Tariffs
-$225/night. Minimum two nights booking.
-Please be aware that The Best Island Bus is only available from October 1st - June 30th every year.
-Unfortunately there is no disabled access and we are unable to cater for pets. We can cater for one extra person;
-please contact us for further details.
-Arrival/Departure times
-Check in time 2pm
-Check out time 11am
-If you need to come earlier or leave later let us know and we’ll see what we can do.
-Deposits & Payment
-A 50% deposit is required to secure your booking.
-The full balance payment is required 14 days prior to arrival.
-Cancellations*
-Cancellations within 28 days of arrival date 50% of deposit to be retained
-Cancellation within 21 days of arrival date 100% of deposit to be retained
-* Any transaction fees will be deducted from reimbursements
+          <br />
+          <p css={infoBodyStyles}>We manage our bookings and enquiries personally. We endeavour to be in touch as soon as possible.</p>
+          <p css={infoBodyStyles}>There are discounted rates for longer stays. All reservations are subject to confirmation.</p>
+
+          <div css={infoTitleStyles}>Payment</div>
+          <p css={infoBodyStyles}>
+            <strong>Once your booking is agreed we will send you an invoice with all the details</strong>
+            <br />
+            <br />
+            You can pay for your accommodation online with:
+            <ul>
+              <li>Credit card through <strong>PayPal</strong></li>
+              <li><strong>Direct Credit</strong> - NZ Bank account required</li>
+            </ul>
           </p>
+          <div css={infoTitleStyles}>Tariffs</div>
+          <p css={infoBodyStyles}>
+            <strong>$225/night. Minimum two nights booking.</strong><br />
+            Please be aware that The Best Island Bus is only available from October 1st - June 30th every year.
+            <br /><br />Unfortunately there is no disabled access and we are unable to cater for pets. We can cater for one extra person;
+            please contact us for further details.
+          </p>
+          <div css={infoTitleStyles}>Arrival/Departure times</div>
+          <p css={infoBodyStyles}>
+            <strong>Check in time 2pm</strong><br />
+            <strong>Check out time 11am</strong><br />
+            If you need to come earlier or leave later let us know and we’ll see what we can do.
+          </p>
+          <div css={infoTitleStyles}>Deposits & Payment</div>
+          <p css={infoBodyStyles}>
+            A <strong>50% deposit</strong> is required to secure your booking.<br />
+            The full balance payment is required 14 days prior to arrival.
+          </p>
+          <div css={infoTitleStyles}>Cancellations*</div>
+          <p css={infoBodyStyles}>
+            Cancellations within 28 days of arrival date<br />
+            50% of deposit to be retained<br /><br />
+            Cancellation within 21 days of arrival date<br />
+            100% of deposit to be retained<br /><br />
+            <span css={primaryBrandHeadingStyles}>*</span><sub>Any transaction fees will be deducted from reimbursements</sub>
+          </p>
+          <br />
         </section>
         <aside css={asideStyles}>
           <StaticImage src="../images/logo.svg" alt="logo" height={200} css={logoStyle}></StaticImage>
@@ -641,10 +858,12 @@ Cancellation within 21 days of arrival date 100% of deposit to be retained
       </div>
       <section css={sectionContainerStyles}>
         <section css={quartinarySectionStyles}>
-          <p>"Awesome. Relaxing, stunning place to stay.
-The estuary with the mountains in the distance is a great view to have over brekky. We would recommend the Best Island Bus to anyone we know. Clare & Simon made us feel so welcome. Thankyou so much. “
-Tania Auckland"
-          </p>
+          <div css={guestBookEntryStyle}>
+            <p>
+              <span className="quotes">&#x201C;</span><p> <br />Awesome. Relaxing, stunning place to stay.The estuary with the mountains in the distance is a great view to have over brekky. We would recommend the Best Island Bus to anyone we know. Clare & Simon made us feel so welcome. Thankyou so much.<br /></p><span className="quotes">&#x201D;</span>
+            </p>
+            <p className="guest-name">Tania<br /><sub>Auckland</sub></p>
+          </div>
         </section>
         <aside css={asideStyles}>
         </aside>
@@ -652,23 +871,33 @@ Tania Auckland"
       <div css={dividerStyles}>
         <h2 css={dividertextStyles}>finding us</h2>
       </div>
-      <section css={sectionContainerStyles}>
-        <section css={primarySectionStyles}>
-          <StaticImage src="../images/map.jpg" alt="map" height={200}></StaticImage>
-        </section>
-        <a href="https://goo.gl/maps/8hjrQeo9gzhoay5G7">google link for map</a>
-        <a href="https:/instagram.com/bestislandbus" ></a>
+      <section css={mapInstaContainer}>
+        <div css={mapContainerStyles}>
+          <section css={primarySectionStyles}>
+            <StaticImage src="../images/map.jpg" alt="map" css={mapStyles} />
+            <div><a href="https://goo.gl/maps/8hjrQeo9gzhoay5G7">google link for map</a></div>
+          </section>
+        </div>
+        <div css={instaContainerStyles}>
+          <a href="https:/instagram.com/bestislandbus">
+            <StaticImage src="../images/insta.png" alt="instagram logo" css={instaLogoStyles} />
+          </a>
+        </div>
       </section>
       <section css={galleryDoubleSection}>
         <div css={contactPanel}>
           <h4>Get in touch to find out more</h4>
-          <div css={emailStyles}><p>relax.bestislandbus.nz</p></div>
+          <div css={emailStyles}>
+            <StaticImage src="../images/email.png" alt="email icon" css={emailIconStyles} />
+            <a href="mailto:relax@bestislandbus.nz">relax@bestislandbus.nz</a></div>
           <div css={phoneNumberStyles}>
-            <div >
-              <p>Simon 0064 21 775 806</p>
-              <p>Clare 0064 21 222 8396</p>
+            <StaticImage src="../images/mobile.png" alt="phone icon" css={phoneIconStyles} />
+            <div>
+              <p>Clare <a href="tel:+6421775806">+64 21 775 806</a></p>
+              <p>Simon <a href="tel:+64212228396">+64 21 222 8396</a></p>
             </div>
           </div>
+          <br />
           <a>www.bestislandbus.nz</a>
         </div>
         <div css={imageGardenStyles}></div>
