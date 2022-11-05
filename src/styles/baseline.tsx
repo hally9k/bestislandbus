@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 
 export const baselineStyles = css`
-  @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Arimo&family=GFS+Didot&display=swap');
   html,
   body,
   #root {
