@@ -172,7 +172,7 @@ const whatWeOfferSectionStyles = css`
 const primaryBrandHeadingStyles = css`
   font-family: 'GFS Didot', serif;
   color: ${colorBrandPrimary};
-  font-size: 5rem;
+  font-size: 4rem;
 
   @media (max-width: 1200px) {
     font-size: 3rem;
@@ -336,7 +336,7 @@ const enquiryButtonStyles = css`
 const dividertextStyles = css`
   margin: 0;
   font-family: 'GFS Didot', serif;
-  font-size: 2rem;
+  font-size: 3rem;
 `
 
 const asideStyles = css`
@@ -424,7 +424,8 @@ const quartinarySectionStyles = css`
 
   font-size: 3rem;
 
-  > * {
+
+  > a, p, button {
       font-weight: 200;
       font-size: 2rem;
 
@@ -770,7 +771,7 @@ The bus is situated at the end of our large garden in a secluded corner with its
           <li><strong>takeaways</strong> for late arrivals</li>
           <li><strong>play golf</strong> on the island a few minutes away</li>
         </ul>
-        <br /><span css={primaryBrandHeadingStyles}>ride the bike trail to Rabbit Island<br />or kayak up the estuary</span>
+        <br /><h1 css={primaryBrandHeadingStyles}>ride the bike trail to Rabbit Island<br />or kayak up the estuary</h1>
       </section>
       <section css={galleryVideoHackSection}>
         <div css={videoContainerStyles}>
@@ -813,16 +814,16 @@ The bus is situated at the end of our large garden in a secluded corner with its
       <section css={sectionContainerStyles}>
         <section css={quartinarySectionStyles}>
           <h1 css={primaryBrandHeadingStyles}>a few ideas to get you started</h1>
-          <p><a css={ideasLinkStyles} href="https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/abel-tasman-national-park/?tab-id=50578">Abel Tasman National Park</a></p>
-          <p><a css={ideasLinkStyles} href="https://thesuter.org.nz">Suter Gallery and cafe in Nelson</a></p>
-          <p><a css={ideasLinkStyles} href="https://www.founderspark.co.nz">Founders Heritage Park</a></p>
-          <p><a css={ideasLinkStyles} href="https://www.cablebayadventurepark.com">Cable Bay Adventure Park</a></p>
-          <p><a css={ideasLinkStyles} href="http://www.nelson.govt.nz/recreation/recreation/parks-and-reserves/miyazu-garden/">Miyazu Japanese Gardens and Queens Gardens in Nelson Rabbit Island beach</a></p>
-          <p><a css={ideasLinkStyles} href="https://www.mapuawharf.co.nz">Mapua Wharf</a> ...ferry to <a css={ideasLinkStyles} href="https://www.nelsontasman.nz/visit-nelson-tasman/plan-your-trip/activities/3270-rabbit-island">Rabbit Island</a></p>
-          <p><a css={ideasLinkStyles} href="https://www.nelsontasman.nz/visit-nelson-tasman/destinations/takaka-and-golden-bay/">Takaka in Golden Bay</a></p>
-          <p><a css={ideasLinkStyles} href="https://www.connings.co.nz">Connings Food Market</a></p>
-          <p><a css={ideasLinkStyles} href="https://playhousecafe.co.nz">The Playhouse Cafe and theatre</a></p>
-          <p><a css={ideasLinkStyles} href="https://www.motuekasundaymarket.co.nz/">Local markets Nelson/Motueka</a></p>
+          <p><a css={ideasLinkStyles} href="https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/abel-tasman-national-park/?tab-id=50578" target="_blank" rel="noopener noreferrer">Abel Tasman National Park</a></p>
+          <p><a css={ideasLinkStyles} href="https://thesuter.org.nz" target="_blank" rel="noopener noreferrer">Suter Gallery and cafe in Nelson</a></p>
+          <p><a css={ideasLinkStyles} href="https://www.founderspark.co.nz" target="_blank" rel="noopener noreferrer">Founders Heritage Park</a></p>
+          <p><a css={ideasLinkStyles} href="https://www.cablebayadventurepark.com" target="_blank" rel="noopener noreferrer">Cable Bay Adventure Park</a></p>
+          <p><a css={ideasLinkStyles} href="http://www.nelson.govt.nz/recreation/recreation/parks-and-reserves/miyazu-garden/" target="_blank" rel="noopener noreferrer">Miyazu Japanese Gardens and Queens Gardens in Nelson Rabbit Island beach</a></p>
+          <p><a css={ideasLinkStyles} href="https://www.mapuawharf.co.nz" target="_blank" rel="noopener noreferrer">Mapua Wharf</a> ...ferry to <a css={ideasLinkStyles} href="https://www.nelsontasman.nz/visit-nelson-tasman/plan-your-trip/activities/3270-rabbit-island" target="_blank" rel="noopener noreferrer">Rabbit Island</a></p>
+          <p><a css={ideasLinkStyles} href="https://www.nelsontasman.nz/visit-nelson-tasman/destinations/takaka-and-golden-bay/" target="_blank" rel="noopener noreferrer">Takaka in Golden Bay</a></p>
+          <p><a css={ideasLinkStyles} href="https://www.connings.co.nz" target="_blank" rel="noopener noreferrer">Connings Food Market</a></p>
+          <p><a css={ideasLinkStyles} href="https://playhousecafe.co.nz" target="_blank" rel="noopener noreferrer">The Playhouse Cafe and theatre</a></p>
+          <p><a css={ideasLinkStyles} href="https://www.motuekasundaymarket.co.nz/" target="_blank" rel="noopener noreferrer">Local markets Nelson/Motueka</a></p>
         </section>
         <aside css={asideStyles}>
         <img src={logoSvg} css={logoStyle}/>
@@ -833,8 +834,7 @@ The bus is situated at the end of our large garden in a secluded corner with its
       </div>
       <section css={sectionContainerStyles}>
         <section css={quartinarySectionStyles}>
-          <p>You can book your Best Island Bus stay here
-          </p>
+          <h5>You can book your Best Island Bus stay here</h5>
           <Button onClick={sendEquiry} styles={enquiryButtonStyles} text="send an enquiry" />
         </section>
         <aside css={asideStyles}>
@@ -896,7 +896,7 @@ The bus is situated at the end of our large garden in a secluded corner with its
         <div css={imageIndicatorStyles}>
         </div>
       </section>
-      <div css={dividerStyles}>
+      {/* <div css={dividerStyles}>
         <h2 css={dividertextStyles}>guest book</h2>
       </div>
       <section css={sectionContainerStyles}>
@@ -910,7 +910,7 @@ The bus is situated at the end of our large garden in a secluded corner with its
         </section>
         <aside css={asideStyles}>
         </aside>
-      </section>
+      </section> */}
       <div css={dividerStyles}>
         <h2 css={dividertextStyles}>finding us</h2>
       </div>
@@ -922,7 +922,7 @@ The bus is situated at the end of our large garden in a secluded corner with its
           </section>
         </div>
         <div css={instaContainerStyles}>
-          <a href="https:/instagram.com/bestislandbus">
+          <a href="https:/instagram.com/bestislandbusnz">
             <StaticImage src="../images/insta.png" alt="instagram logo" css={instaLogoStyles} />
           </a>
         </div>
