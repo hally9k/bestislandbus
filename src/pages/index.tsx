@@ -1,12 +1,14 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/react'
-import type { HeadFC } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import { css } from "@emotion/react"
+import { colorBrandPrimary, colorShadePrimary, colorBaseWhite } from '../styles/color'
+import { galleryStyles } from '../styles/gallery'
+
+import { jsx, css } from '@emotion/react'
+import type { HeadFC } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
+import ImageGallery from 'react-image-gallery'
 import { Layout } from '../components/layout'
 import { Button } from '../components/button'
 import { Video } from '../components/video'
-import { colorBrandPrimary, colorShadePrimary, colorBaseWhite } from '../styles/color'
 import bikingImg from '../images/biking.jpg'
 import beachImg from '../images/beach.jpg'
 import waterVideo from '../images/water.mp4'
@@ -16,6 +18,35 @@ import portholeImg from '../images/porthole.jpg'
 import bedImg from '../images/bed.jpg'
 import indicatorImg from '../images/indicator.jpg'
 import gardenImg from '../images/garden.jpg'
+import logoSvg from '../images/logo.svg'
+
+import gallery1 from '../images/gallery/1.jpg'
+import gallery2 from '../images/gallery/2.jpg'
+import gallery3 from '../images/gallery/3.jpg'
+// import gallery4 from '../images/gallery/4.jpg'
+// import gallery5 from '../images/gallery/5.jpg'
+// import gallery6 from '../images/gallery/6.jpg'
+import gallery7 from '../images/gallery/7.jpg'
+// import gallery8 from '../images/gallery/8.jpg'
+import gallery9 from '../images/gallery/9.jpg'
+// import gallery10 from '../images/gallery/10.jpg'
+import gallery11 from '../images/gallery/11.jpg'
+import gallery12 from '../images/gallery/12.jpg'
+
+const accomodationGalleryImages = [
+  { original: gallery1, thumnail: gallery1 },
+  { original: gallery2, thumnail: gallery2 },
+  { original: gallery3, thumnail: gallery3 },
+  // { original: gallery4, thumnail: gallery4 },
+  // { original: gallery5, thumnail: gallery5 },
+  // { original: gallery6, thumnail: gallery6 },
+  { original: gallery7, thumnail: gallery7 },
+  // { original: gallery8, thumnail: gallery8 },
+  { original: gallery9, thumnail: gallery9 },
+  // { original: gallery10, thumnail: gallery10 },
+  { original: gallery11, thumnail: gallery11 },
+  { original: gallery12, thumnail: gallery12 },
+] 
 
 const pageStyles = {
   color: "#232129",
@@ -36,23 +67,24 @@ const logoWrapperStyle = css`
 `
 
 const logoStyle = css`
-  height: 15rem;
-  width: 15rem;
+  height: 12rem;
+  width: 12rem;
+
+  margin: 1rem;
 
   > div {
     height: 100%
   }
 
   @media (max-width: 650px) {
-    height: 8rem;
-    width: 8rem;
+    height: 6rem;
+    width: 6rem;
   }
 `
 
 const logoTextStyle = css`
-  width: 15rem;
-
-  margin-top: -2rem;
+  width: 12rem;
+  margin: 1rem;
 
   font-weight: 500;
 
@@ -97,6 +129,16 @@ const primarySectionStyles = css`
   > h1, h2 {
     color: ${colorBrandPrimary};
     text-align: center;
+  }
+`
+
+const ideasLinkStyles = css`
+  color: green;
+  text-decoration: none;
+
+  :hover {
+    color: lightgreen;
+
   }
 `
 
@@ -342,7 +384,7 @@ const tertiarySectionStyles = css`
     }
 `
 
-const accomodationSectionTextStyles = css`
+const accommodationSectionTextStyles = css`
   padding: 3rem;
   font-size: 1.5rem;
 
@@ -669,8 +711,8 @@ const IndexPage = () => <Layout>
     <main style={pageStyles}>
       <div css={headerStyle}>
         <div css={logoWrapperStyle}>
-          <StaticImage src="../images/logo.svg" alt="logo" css={logoStyle}></StaticImage>
-            <h1 css={logoTextStyle}>South Island<br/>New Zealand</h1>
+          <img src={logoSvg} css={logoStyle}/>
+          <h1 css={logoTextStyle}>South Island<br/>New Zealand</h1>
         </div>
         <StaticImage src="../images/hero.jpg" alt="beautiful orange bus by the water"></StaticImage>
       </div>
@@ -691,13 +733,14 @@ const IndexPage = () => <Layout>
           </div>
       </section>
       <div css={dividerStyles}>
-        <h2 css={dividertextStyles}>accomodation</h2>
+        <h2 css={dividertextStyles}>accommodation</h2>
       </div>
       <section css={sectionContainerStyles}>
         <section css={tertiarySectionStyles}>
-          <StaticImage src="../images/inside-front.jpg" alt="interior shot of pink sofa"></StaticImage>
+          <ImageGallery items={accomodationGalleryImages}/>
+          {/* <StaticImage src="../images/inside-front.jpg" alt="interior shot of pink sofa"></StaticImage> */}
 
-          <p css={accomodationSectionTextStyles}>The Best Island Bus is an original sixties bus
+          <p css={accommodationSectionTextStyles}>The Best Island Bus is an original sixties bus
 that has been lovingly modernised. We have endeavoured to combine comfortable and stylish accommodation with the charm and authenticity that a bus of this era has, in bucketloads.
 <h1 css={primaryBrandHeadingStyles}>cosy...secluded....and surprisingly spacious</h1>
 The bus is situated at the end of our large garden in a secluded corner with its own private lawn. There is a large deck outside for breakfast al fresco with numerous cushions and loungers for those lazy evenings. A generous bathroom and laundry that is separate from the bus but easily accessed by a corridor. A fully fitted kitchen looks out over the garden. A queen bed with cotton sheets. At one end there is a large sofa where you can chill out and watch the herons and kingfishers.
@@ -706,7 +749,7 @@ The bus is situated at the end of our large garden in a secluded corner with its
           </p>
         </section>
         <aside css={asideStyles}>
-          <StaticImage src="../images/logo.svg" alt="logo" height={200} css={logoStyle}></StaticImage>
+          <img src={logoSvg} css={logoStyle}/>
         </aside>
       </section>
       <StaticImage src="../images/estuary.jpg" alt="mountain ranges with water in the foreground"></StaticImage>
@@ -756,7 +799,7 @@ The bus is situated at the end of our large garden in a secluded corner with its
           </p>
         </section>
         <aside css={asideStyles}>
-          <StaticImage src="../images/logo.svg" alt="logo" height={200} css={logoStyle}></StaticImage>
+          <img src={logoSvg} css={logoStyle}/>
         </aside>
       </section>
       <section css={galleryTripleSection}>
@@ -770,19 +813,19 @@ The bus is situated at the end of our large garden in a secluded corner with its
       <section css={sectionContainerStyles}>
         <section css={quartinarySectionStyles}>
           <h1 css={primaryBrandHeadingStyles}>a few ideas to get you started</h1>
-          <p><a href="https://www.nelsontasman.nz">Abel Tasman National Park</a></p>
-          <p><a href="https://www.google.com/search?client=safa- ri&rls=en&q=suter+gallery&ie=UTF-8&oe=UTF-8">Suter Gallery and cafe in Nelson</a></p>
-          <p><a href="https://www.google.com/search?client=safa- ri&rls=en&q=founders+park&ie=UTF-8&oe=UTF-8">Founders Heritage Park</a></p>
-          <p><a href="https://www.google.com/search?cli- ent=safari&rls=en&q=cable+bay+adven- ture+park&ie=UTF-8&oe=UTF-8">Cable Bay Adventure Park</a></p>
-          <p><a href="https://www.google.com/search?client=safa- ri&rls=en&q=Miyazu+Japanese+garden+nel- son+nz&ie=UTF-8&oe=UTF-8">Miyazu Japanese Gardens and Queens Gardens in Nelson Rabbit Island beach</a></p>
-          <p><a href="https://www.mapuawharf.co.nz">Mapua Wharf</a> ...ferry to rabbit island</p>
-          <p><a>Takaka in Golden Bay</a></p>
-          <p><a href="https://www.google.com/search?client=sa- fari&rls=en&q=connings+food+mar- ket&ie=UTF-8&oe=UTF-8">Connings Food Market</a></p>
-          <p><a href="https://playhousecafe.co.nz">The Playhouse Cafe and theatre</a></p>
-          <p><a>Local markets Nelson/Motueka</a></p>
+          <p><a css={ideasLinkStyles} href="https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/abel-tasman-national-park/?tab-id=50578">Abel Tasman National Park</a></p>
+          <p><a css={ideasLinkStyles} href="https://thesuter.org.nz">Suter Gallery and cafe in Nelson</a></p>
+          <p><a css={ideasLinkStyles} href="https://www.founderspark.co.nz">Founders Heritage Park</a></p>
+          <p><a css={ideasLinkStyles} href="https://www.cablebayadventurepark.com">Cable Bay Adventure Park</a></p>
+          <p><a css={ideasLinkStyles} href="http://www.nelson.govt.nz/recreation/recreation/parks-and-reserves/miyazu-garden/">Miyazu Japanese Gardens and Queens Gardens in Nelson Rabbit Island beach</a></p>
+          <p><a css={ideasLinkStyles} href="https://www.mapuawharf.co.nz">Mapua Wharf</a> ...ferry to <a css={ideasLinkStyles} href="https://www.nelsontasman.nz/visit-nelson-tasman/plan-your-trip/activities/3270-rabbit-island">Rabbit Island</a></p>
+          <p><a css={ideasLinkStyles} href="https://www.nelsontasman.nz/visit-nelson-tasman/destinations/takaka-and-golden-bay/">Takaka in Golden Bay</a></p>
+          <p><a css={ideasLinkStyles} href="https://www.connings.co.nz">Connings Food Market</a></p>
+          <p><a css={ideasLinkStyles} href="https://playhousecafe.co.nz">The Playhouse Cafe and theatre</a></p>
+          <p><a css={ideasLinkStyles} href="https://www.motuekasundaymarket.co.nz/">Local markets Nelson/Motueka</a></p>
         </section>
         <aside css={asideStyles}>
-          <StaticImage src="../images/logo.svg" alt="logo" height={200} css={logoStyle}></StaticImage>
+        <img src={logoSvg} css={logoStyle}/>
         </aside>
       </section>
       <div css={dividerStyles}>
@@ -844,7 +887,7 @@ The bus is situated at the end of our large garden in a secluded corner with its
           <br />
         </section>
         <aside css={asideStyles}>
-          <StaticImage src="../images/logo.svg" alt="logo" height={200} css={logoStyle}></StaticImage>
+        <img src={logoSvg} css={logoStyle}/>
         </aside>
       </section>
       <section css={galleryDoubleSection}>
