@@ -1,27 +1,12 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
 import React from 'react'
-import { colorBrandPrimary, colorShadePrimary, colorBaseWhite } from '../styles/color'
+import { primaryBrandHeadingStyles } from '../styles/heading'
+import { sectionContainerStyles, secondarySectionStyles, quartinarySectionStyles, asideStyles } from '../styles/section'
+import { Logo } from '../components/logo'
 import marketImg from '../images/market.png'
 import islandsImg from '../images/islands.jpg'
 import portholeImg from '../images/porthole.jpg'
-import logoSvg from '../images/logo.svg'
-
-const logoStyle = css`
-  height: 12rem;
-  width: 12rem;
-
-  margin: 1rem;
-
-  > div {
-    height: 100%
-  }
-
-  @media (max-width: 650px) {
-    height: 6rem;
-    width: 6rem;
-  }
-`
 
 const ideasLinkStyles = css`
   color: green;
@@ -32,92 +17,6 @@ const ideasLinkStyles = css`
 
   }
 `
-
-const primaryBrandHeadingStyles = css`
-  font-family: 'GFS Didot', serif;
-  color: ${colorBrandPrimary};
-  font-size: 4rem;
-
-  @media (max-width: 1200px) {
-    font-size: 3rem;
-  }
-
-  @media (max-width: 960px) {
-    font-size: 2rem;
-  }
-
-  @media (max-width: 750px) {
-    font-size: 1.8rem;
-  }
-`
-
-const secondarySectionStyles = css`
-  padding: 3rem 5rem;
-  background-color: ${colorShadePrimary};
-
-  font-size: 2rem;
-
-  @media (max-width: 1200px) {
-    font-size: 2rem;
-  }
-
-  @media (max-width: 960px) {
-    font-size: 1.8rem;
-  }
-
-  @media (max-width: 750px) {
-    font-size: 1.5rem;
-  }
-`
-
-const sectionContainerStyles = css`
-  display: flex;
-`
-
-const asideStyles = css`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 300px;
-
-  @media (max-width: 960px) {
-    display: none;
-  }
-`
-
-const quartinarySectionStyles = css`
-  padding: 3rem;
-  width: calc(100% - 300px);
-
-  @media (max-width: 960px) {
-    width: 100%;
-  }
-
-  font-size: 3rem;
-
-  > a, p, button {
-      font-weight: 200;
-      font-size: 2rem;
-
-      @media (max-width: 1200px) {
-        font-size: 1.5rem;
-      }
-
-      @media (max-width: 960px) {
-        font-size: 1.5rem;
-      }
-
-      @media (max-width: 715px) {
-        font-size: 1.2rem;
-      }
-
-      @media (max-width: 410px) {
-        font-size: 1rem;
-      }
-    }
-`
-
 
 const imageContainerStyles = css`
   height: 100%;
@@ -168,7 +67,7 @@ export const OurLocalArea = () => <React.Fragment>
       </p>
     </section>
     <aside css={asideStyles}>
-      <img src={logoSvg} css={logoStyle}/>
+      <Logo/>
     </aside>
     </section>
     <section css={galleryTripleSection}>
@@ -194,7 +93,7 @@ export const OurLocalArea = () => <React.Fragment>
       <p><a css={ideasLinkStyles} href="https://www.motuekasundaymarket.co.nz/" target="_blank" rel="noopener noreferrer">Local markets Nelson/Motueka</a></p>
     </section>
     <aside css={asideStyles}>
-    <img src={logoSvg} css={logoStyle}/>
+    <Logo/>
     </aside>
   </section>
 </React.Fragment>

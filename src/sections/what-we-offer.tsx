@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
-import { colorBrandPrimary, colorShadePrimary } from '../styles/color'
+import { primaryBrandHeadingStyles } from '../styles/heading'
+import { secondarySectionStyles } from '../styles/section'
 import React from 'react'
 import waterVideo from '../images/water.mp4'
 import { Video } from '../components/video'
@@ -33,44 +34,6 @@ const whatWeOfferSectionStyles = css`
     padding: 0.5rem 1rem;
   }
 `
-
-const primaryBrandHeadingStyles = css`
-  font-family: 'GFS Didot', serif;
-  color: ${colorBrandPrimary};
-  font-size: 4rem;
-
-  @media (max-width: 1200px) {
-    font-size: 3rem;
-  }
-
-  @media (max-width: 960px) {
-    font-size: 2rem;
-  }
-
-  @media (max-width: 750px) {
-    font-size: 1.8rem;
-  }
-`
-
-const secondarySectionStyles = css`
-  padding: 3rem 5rem;
-  background-color: ${colorShadePrimary};
-
-  font-size: 2rem;
-
-  @media (max-width: 1200px) {
-    font-size: 2rem;
-  }
-
-  @media (max-width: 960px) {
-    font-size: 1.8rem;
-  }
-
-  @media (max-width: 750px) {
-    font-size: 1.5rem;
-  }
-`
-
 
 const videoStyles = css`
   flex-grow: 1; border: none; margin: 0; padding: 0;

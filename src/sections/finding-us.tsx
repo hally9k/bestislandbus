@@ -2,9 +2,7 @@
 
 import { jsx, css } from '@emotion/react'
 import { StaticImage } from 'gatsby-plugin-image'
-
 import { primarySectionStyles } from '../styles/section'
-
 
 const mapStyles = css`
   border: 1px black solid;

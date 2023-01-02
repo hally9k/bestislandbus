@@ -15,7 +15,6 @@ const imageContainerStyles = css`
   background-size: cover;
 `
 
-
 const gallerySection = css`
   display: grid;
   height: 480px; 

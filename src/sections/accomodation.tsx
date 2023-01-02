@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
-import { colorBrandPrimary, colorShadePrimary } from '../styles/color'
+import { tertiarySectionStyles, sectionContainerStyles, asideStyles } from '../styles/section'
+import { primaryBrandHeadingStyles } from '../styles/heading'
 import ImageGallery from 'react-image-gallery'
-import logoSvg from '../images/logo.svg'
+import { Logo } from '../components/logo'
 import { StaticImage } from 'gatsby-plugin-image'
 
 import gallery1 from '../images/gallery/1.jpg'
@@ -33,89 +34,6 @@ const accomodationGalleryImages = [
   { original: gallery11, thumnail: gallery11 },
   { original: gallery12, thumnail: gallery12 },
 ] 
-
-const logoStyle = css`
-  height: 12rem;
-  width: 12rem;
-
-  margin: 1rem;
-
-  > div {
-    height: 100%
-  }
-
-  @media (max-width: 650px) {
-    height: 6rem;
-    width: 6rem;
-  }
-`
-
-const primaryBrandHeadingStyles = css`
-  font-family: 'GFS Didot', serif;
-  color: ${colorBrandPrimary};
-  font-size: 4rem;
-
-  @media (max-width: 1200px) {
-    font-size: 3rem;
-  }
-
-  @media (max-width: 960px) {
-    font-size: 2rem;
-  }
-
-  @media (max-width: 750px) {
-    font-size: 1.8rem;
-  }
-`
-
-const sectionContainerStyles = css`
-  display: flex;
-`
-
-const asideStyles = css`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 300px;
-
-  @media (max-width: 960px) {
-    display: none;
-  }
-`
-
-const tertiarySectionStyles = css`
-  padding: 0;
-  background-color: ${colorShadePrimary};
-  width: calc(100% - 300px);
-    
-  @media (max-width: 960px) {
-    width: 100%;
-  }
-
-  font-size: 3rem;
-
-  > * {
-      font-weight: 200;
-      font-size: 2rem;
-
-      @media (max-width: 1200px) {
-        font-size: 1.5rem;
-      }
-
-      @media (max-width: 960px) {
-        font-size: 1.5rem;
-      }
-
-      @media (max-width: 715px) {
-        font-size: 1.2rem;
-      }
-
-      @media (max-width: 410px) {
-        font-size: 1rem;
-      }
-    }
-`
 
 const accommodationSectionTextStyles = css`
   padding: 3rem;
@@ -163,7 +81,7 @@ The bus is situated at the end of our large garden in a secluded corner with its
       </p>
     </section>
     <aside css={asideStyles}>
-      <img src={logoSvg} css={logoStyle}/>
+      <Logo/>
     </aside>
   </section>
   <StaticImage src="../images/estuary.jpg" alt="mountain ranges with water in the foreground"></StaticImage>

@@ -65,9 +65,6 @@ const IndexPage = () => <Layout>
   </Layout>
 
 
-
-
-
 export default IndexPage
 
 export const Head: HeadFC = () => <title>Best Island Bus</title>

@@ -1,154 +1,16 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
 
-import { colorBrandPrimary, colorShadePrimary, colorBaseWhite } from '../styles/color'
-import { Button } from '../components/button'
+import { colorBrandPrimary, colorBaseWhite } from '../styles/color'
+import { tertiarySectionStyles, sectionContainerStyles, quartinarySectionStyles, asideStyles } from '../styles/section'
+import { primaryBrandHeadingStyles } from '../styles/heading'
+import { EnquiryButton } from '../components/enquiry-button'
+import { Logo } from '../components/logo'
 import bedImg from '../images/bed.jpg'
 import indicatorImg from '../images/indicator.jpg'
 import logoSvg from '../images/logo.svg'
 
 import React from 'react'
-
-const logoStyle = css`
-  height: 12rem;
-  width: 12rem;
-
-  margin: 1rem;
-
-  > div {
-    height: 100%
-  }
-
-  @media (max-width: 650px) {
-    height: 6rem;
-    width: 6rem;
-  }
-`
-
-const primaryBrandHeadingStyles = css`
-  font-family: 'GFS Didot', serif;
-  color: ${colorBrandPrimary};
-  font-size: 4rem;
-
-  @media (max-width: 1200px) {
-    font-size: 3rem;
-  }
-
-  @media (max-width: 960px) {
-    font-size: 2rem;
-  }
-
-  @media (max-width: 750px) {
-    font-size: 1.8rem;
-  }
-`
-
-const sectionContainerStyles = css`
-  display: flex;
-`
-
-const enquiryButtonStyles = css`
-  font-size: 3rem;
-
-  @media (max-width: 1400px) {
-    font-size: 2rem;
-  }
-
-  @media (max-width: 1200px) {
-    font-size: 1.6rem;
-  }
-
-  @media (max-width: 960px) {
-    font-size: 1.5rem;
-  }
-
-  @media (max-width: 715px) {
-    font-size: 1.2rem;
-  }
-
-  @media (max-width: 410px) {
-    font-size: 1rem;
-  }
-`
-
-const asideStyles = css`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 300px;
-
-  @media (max-width: 960px) {
-    display: none;
-  }
-`
-
-const tertiarySectionStyles = css`
-  padding: 0;
-  background-color: ${colorShadePrimary};
-  width: calc(100% - 300px);
-    
-  @media (max-width: 960px) {
-    width: 100%;
-  }
-
-  font-size: 3rem;
-
-  > * {
-      font-weight: 200;
-      font-size: 2rem;
-
-      @media (max-width: 1200px) {
-        font-size: 1.5rem;
-      }
-
-      @media (max-width: 960px) {
-        font-size: 1.5rem;
-      }
-
-      @media (max-width: 715px) {
-        font-size: 1.2rem;
-      }
-
-      @media (max-width: 410px) {
-        font-size: 1rem;
-      }
-    }
-`
-
-const quartinarySectionStyles = css`
-  padding: 3rem;
-  width: calc(100% - 300px);
-
-  @media (max-width: 960px) {
-    width: 100%;
-  }
-
-  font-size: 3rem;
-
-
-  > a, p, button {
-      font-weight: 200;
-      font-size: 2rem;
-
-      @media (max-width: 1200px) {
-        font-size: 1.5rem;
-      }
-
-      @media (max-width: 960px) {
-        font-size: 1.5rem;
-      }
-
-      @media (max-width: 715px) {
-        font-size: 1.2rem;
-      }
-
-      @media (max-width: 410px) {
-        font-size: 1rem;
-      }
-    }
-`
-
 
 const imageContainerStyles = css`
   height: 100%;
@@ -199,19 +61,12 @@ const infoBodyStyles = css`
   padding: 1rem 3rem;
 `
 
-
-const sendEquiry: React.MouseEventHandler<HTMLButtonElement> = (event) => {
-  event.preventDefault();
-
-  window.location.href = "mailto:relax@bestislandbus.nz";
-}
-
 export const BookingYourStay = () => <React.Fragment>
   <section css={sectionContainerStyles}>
     <section css={quartinarySectionStyles}>
       <h5>You can book your Best Island Bus stay here</h5>
-      <Button onClick={sendEquiry} styles={enquiryButtonStyles} text="send an enquiry" />
-    </section>
+      <EnquiryButton/>
+      </section>
     <aside css={asideStyles}>
     </aside>
   </section>
@@ -262,7 +117,7 @@ export const BookingYourStay = () => <React.Fragment>
       <br />
     </section>
     <aside css={asideStyles}>
-    <img src={logoSvg} css={logoStyle}/>
+    <Logo/>
     </aside>
   </section>
   <section css={galleryDoubleSection}>
