@@ -48,10 +48,7 @@ const dividertextStyles = css`
   margin: 0;
   font-family: 'GFS Didot', serif;
   font-size: 3rem;
-`
-
-const footerStyles = css`
-  height: 100px;
+  color: white;
 `
 
 const IndexPage = () => <Layout>
@@ -78,7 +75,7 @@ const IndexPage = () => <Layout>
       </div>
       <FindingUs />
       <GetInTouch />
-      <footer css={footerStyles}></footer>
+      {/* <footer css={footerStyles}></footer> */}
     </main>
   </Layout>
 

@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
 
-import { colorBrandPrimary, colorBaseWhite } from '../styles/color'
-import { tertiarySectionStyles, sectionContainerStyles, sectionPadding, asideStyles } from '../styles/section'
-import { primaryBrandHeadingStyles, secondaryBodyTextStyles } from '../styles/typeography'
+import { colorBrandPrimary, colorBaseWhite, colorShadePrimary } from '../styles/color'
+import { tertiarySectionStyles, sectionContainerStyles, asideStyles } from '../styles/section'
+import { primaryBrandHeadingStyles } from '../styles/typeography'
 import { EnquiryButton } from '../components/enquiry-button'
 import { Logo } from '../components/logo'
 import bedImg from '../images/bed.jpg'
@@ -156,6 +156,11 @@ const infoSectionStyles = css`
   }
 `
 
+const bookingAsideStyles = css`
+  ${asideStyles}
+  background-color: ${colorShadePrimary};
+`
+
 export const BookingYourStay = () => <React.Fragment>
   <section css={sectionContainerStyles}>
     <section css={bookHereStyles}>
@@ -213,7 +218,7 @@ export const BookingYourStay = () => <React.Fragment>
       </p>
       <br />
     </section>
-    <aside css={asideStyles}>
+    <aside css={bookingAsideStyles}>
     <Logo/>
     </aside>
   </section>

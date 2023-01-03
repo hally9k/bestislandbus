@@ -15,15 +15,15 @@ export const sectionPadding = css`
   }
 
   @media (max-width: 880px) {
-    padding: 1.5rem 3rem;
+    padding: 2rem 3rem;
   }
 
   @media (max-width: 715px) {
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
   }
 
   @media (max-width: 410px) {
-    padding: 0.5rem 1rem;
+    padding: 1.5rem 1rem;
   }
 `
 

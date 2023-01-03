@@ -72,16 +72,30 @@ const contactPanel = css`
 const phoneNumberStyles = css`
   display: flex;
 
+  align-items: center;
+
+  margin-bottom: 0.5rem;
+
   > div > p {
     margin: 0;
   }
+`
+
+const phoneNumberIconStyles = css`
+  display: flex;
+  align-items: center;
 `
 
 const phoneIconStyles = css`
   height: 40px;
   width: 40px;
   margin-right: 10px;
-`
+
+  @media (max-width: 960px) {
+    height: 30px;
+    width: 30px;
+  }
+  `
 
 const emailStyles = css`
 `
@@ -91,6 +105,11 @@ const emailIconStyles = css`
   width: 40px;
   top: -5px;
   margin-right: 10px;
+
+  @media (max-width: 960px) {
+    height: 30px;
+    width: 30px;
+  }
 `
 
 
@@ -110,19 +129,36 @@ const instaContainerStyles = css`
 
 export const GetInTouch = () => <section css={galleryDoubleSection}>
   <div css={contactPanel}>
+    <br />
     <h4>Get in touch to find out more</h4>
+    <br />
+    <br />
     <div css={emailStyles}>
       <StaticImage src="../images/email.png" alt="email icon" css={emailIconStyles} />
-      <a href="mailto:relax@bestislandbus.nz">relax@bestislandbus.nz</a></div>
+      <a href="mailto:relax@bestislandbus.nz">relax@bestislandbus.nz</a>
+    </div>
+
     <div css={phoneNumberStyles}>
-      <StaticImage src="../images/mobile.png" alt="phone icon" css={phoneIconStyles} />
+      <div css={phoneNumberIconStyles}>
+        <StaticImage src="../images/mobile.png" alt="phone icon" css={phoneIconStyles} />
+      </div>
       <div>
-        <p>Clare <a href="tel:+6421775806">+64 21 775 806</a></p>
-        <p>Simon <a href="tel:+64212228396">+64 21 222 8396</a></p>
+        <p><a href="tel:+6421775806">Clare +64 21 775 806</a></p>
       </div>
     </div>
+
+    <div css={phoneNumberStyles}>
+      <div css={phoneNumberIconStyles}>
+        <StaticImage src="../images/mobile.png" alt="phone icon" css={phoneIconStyles} />
+      </div>
+      <div>
+        <p><a href="tel:+64212228396">Simon +64 21 222 8396</a></p>
+      </div>
+    </div>
+
+
     <br />
-    <a>www.bestislandbus.nz</a>
+    <a href="#">www.bestislandbus.nz</a>
 
     <div css={instaContainerStyles}>
      <a href="https:/instagram.com/bestislandbusnz">

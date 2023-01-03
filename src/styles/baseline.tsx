@@ -44,6 +44,7 @@ export const baselineStyles = css`
   figure,
   ol,
   ul {
+    color: darkslategray;
     padding: 0;
     margin: 0;
   }
