@@ -23,8 +23,25 @@ const pageStyles = {
 
 const dividerStyles = css`
   background-color: ${colorBrandPrimary};
-  padding: 1rem;
   color: ${colorBaseWhite};
+
+  padding: 1rem 6rem;
+
+  @media (max-width: 1225px) {
+    padding: 1rem 3rem;
+  }
+
+  @media (max-width: 880px) {
+    padding: 1rem 3rem;
+  }
+
+  @media (max-width: 715px) {
+    padding: 1rem 2rem;
+  }
+
+  @media (max-width: 410px) {
+    padding: 1rem 1rem;
+  }
 `
 
 const dividertextStyles = css`

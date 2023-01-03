@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
-import { primaryBrandHeadingStyles } from '../styles/heading'
+import { primaryBrandHeadingStyles } from '../styles/typeography'
 import { secondarySectionStyles } from '../styles/section'
 import React from 'react'
 import waterVideo from '../images/water.mp4'
@@ -49,13 +49,18 @@ const galleryVideoHackSection = css`
   grid-template-columns: 853px 1fr 1fr;
 `
 
+const listStyles = css`
+  li {
+    margin-bottom: 1rem;
+  }
+`
+
 export const WhatWeOffer = () => <React.Fragment>
       <section css={secondarySectionStyles}>
         <p>When we made our move to the Tasman region from Wellington five years ago, we decided to create a holiday stay on the island. How could we not share such outstanding panoramic views of the Kahurangi Mountains and the unspoilt natural ecosystem of the Waimea Estuary.
         <br /><br />Let’s do something different we said...enter the Best Island Bus!</p>
-      </section>
-      <section css={secondarySectionStyles}>
-        <ul>
+        <br />
+        <ul css={listStyles}>
           <li><strong>kayaking....</strong> you can kayak onto the estuary a few metres from the end of the garden on a high tide. Kayaks available.</li>
           <li><strong>biking....</strong> the Great Taste Trail.... we can drop you off and pick you up. Bikes available.</li>
           <li><strong>walk</strong> the beaches around the island</li>

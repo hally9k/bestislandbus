@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
 import React from 'react'
-import { primaryBrandHeadingStyles } from '../styles/heading'
+import { primaryBrandHeadingStyles } from '../styles/typeography'
 import { sectionContainerStyles, secondarySectionStyles, quartinarySectionStyles, asideStyles } from '../styles/section'
 import { Logo } from '../components/logo'
 import marketImg from '../images/market.png'

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
 import { tertiarySectionStyles, secondarySectionStyles, sectionContainerStyles, asideStyles } from '../styles/section'
-import { primaryBrandHeadingStyles } from '../styles/heading'
+import { primaryBrandHeadingStyles } from '../styles/typeography'
 import ImageGallery from 'react-image-gallery'
 import { Logo } from '../components/logo'
 import { StaticImage } from 'gatsby-plugin-image'
@@ -17,7 +17,23 @@ import React from 'react'
 
 const sectionStyles = css`
   ${tertiarySectionStyles}
-  padding: 0
+  padding: 0;
+
+  @media (max-width: 1225px) {
+    padding: 0;
+  }
+
+  @media (max-width: 880px) {
+    padding: 0;
+  }
+
+  @media (max-width: 715px) {
+    padding: 0;
+  }
+
+  @media (max-width: 410px) {
+    padding: 0;
+  }
 `
 
 const accomodationGalleryImages = [

@@ -10,7 +10,6 @@ export const sectionContainerStyles = css`
 export const sectionPadding = css`
   padding: 3rem 6rem;
 
-
   @media (max-width: 1225px) {
     padding: 1.5rem 3rem;
   }
