@@ -27,8 +27,8 @@ export const baselineStyles = css`
     width: 100vw;
     height: 100%;
     margin: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
     font: 16px/1 sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;

@@ -4,11 +4,10 @@ import { StylesProvider, ThemeProvider } from '@material-ui/styles'
 import { createTheme } from '@material-ui/core/styles'
 import { colorBrandPrimary, colorBrandSecondary } from "../styles/color"
 import "../styles/image-gallery.css"
+import { baselineStyles } from "../styles/baseline"
 
 const globalStyles = css`
-  body {
-    margin: 0;
-  }
+  ${baselineStyles}
 `
 
 const theme = createTheme({

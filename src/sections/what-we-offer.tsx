@@ -8,29 +8,6 @@ import { Video } from '../components/video'
 import bikingImg from '../images/biking.jpg'
 import beachImg from '../images/beach.jpg'
 
-const whatWeOfferSectionStyles = css`
-    padding: 2rem 4rem;
-    max-width: 70rem;
-    font-size: 1.5rem;
-    font-weight: 200;
-
-    @media (max-width: 1200px) {
-      font-size: 1.5rem;
-    }
-
-    @media (max-width: 960px) {
-      font-size: 1.5rem;
-    }
-
-    @media (max-width: 715px) {
-      font-size: 1.2rem;
-    }
-
-    @media (max-width: 410px) {
-      font-size: 1rem;
-    }
-`
-
 const videoStyles = css`
   flex-grow: 1; border: none; margin: 0; padding: 0;
 `
@@ -73,7 +50,7 @@ const galleryVideoHackSection = css`
 `
 
 export const WhatWeOffer = () => <React.Fragment>
-      <section css={whatWeOfferSectionStyles}>
+      <section css={secondarySectionStyles}>
         <p>When we made our move to the Tasman region from Wellington five years ago, we decided to create a holiday stay on the island. How could we not share such outstanding panoramic views of the Kahurangi Mountains and the unspoilt natural ecosystem of the Waimea Estuary.
         <br /><br />Let’s do something different we said...enter the Best Island Bus!</p>
       </section>

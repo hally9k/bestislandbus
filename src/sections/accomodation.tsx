@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
-import { tertiarySectionStyles, sectionContainerStyles, asideStyles } from '../styles/section'
+import { tertiarySectionStyles, secondarySectionStyles, sectionContainerStyles, asideStyles } from '../styles/section'
 import { primaryBrandHeadingStyles } from '../styles/heading'
 import ImageGallery from 'react-image-gallery'
 import { Logo } from '../components/logo'
@@ -15,6 +15,11 @@ import gallery11 from '../images/gallery/11.jpg'
 import gallery12 from '../images/gallery/12.jpg'
 import React from 'react'
 
+const sectionStyles = css`
+  ${tertiarySectionStyles}
+  padding: 0
+`
+
 const accomodationGalleryImages = [
   { original: gallery1, thumnail: gallery1 },
   { original: gallery2, thumnail: gallery2 },
@@ -23,37 +28,7 @@ const accomodationGalleryImages = [
   { original: gallery9, thumnail: gallery9 },
   { original: gallery11, thumnail: gallery11 },
   { original: gallery12, thumnail: gallery12 },
-] 
-
-const accommodationSectionTextStyles = css`
-  padding: 3rem;
-  font-size: 1.5rem;
-
-  @media (max-width: 1400px) {
-    padding: 2rem 4rem;
-    font-size: 1.2rem;
-  }
-
-  @media (max-width: 1200px) {
-    padding: 1.6rem 3.2rem;
-    font-size: 1.2rem;
-  }
-
-  @media (max-width: 960px) {
-    padding: 1.5rem 3rem;
-    font-size: 1rem;
-  }
-
-  @media (max-width: 715px) {
-    padding: 1.2rem 2.4rem;
-    font-size: 1rem;
-  }
-
-  @media (max-width: 410px) {
-    padding: 1rem 2rem;
-    font-size: 1rem;
-  }
-`
+]
 
 const vistaImageStyles = css`
   min-height: 20rem;
@@ -61,9 +36,9 @@ const vistaImageStyles = css`
 
 export const Accommodation = () => <React.Fragment>
   <section css={sectionContainerStyles}>
-    <section css={tertiarySectionStyles}>
+    <section css={sectionStyles}>
       <ImageGallery items={accomodationGalleryImages}/>
-      <p css={accommodationSectionTextStyles}>The Best Island Bus is an original sixties bus
+      <p css={secondarySectionStyles}>The Best Island Bus is an original sixties bus
 that has been lovingly modernised. We have endeavoured to combine comfortable and stylish accommodation with the charm and authenticity that a bus of this era has, in bucketloads.
 <h1 css={primaryBrandHeadingStyles}>cosy...secluded...and surprisingly spacious</h1>
 The bus is situated at the end of our large garden in a secluded corner with its own private lawn. There is a large deck outside for breakfast al fresco with numerous cushions and loungers for those lazy evenings. A generous bathroom and laundry that is separate from the bus but easily accessed by a corridor. A fully fitted kitchen looks out over the garden. A queen bed with cotton sheets. At one end there is a large sofa where you can chill out and watch the herons and kingfishers.
