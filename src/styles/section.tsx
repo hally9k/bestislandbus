@@ -8,22 +8,22 @@ export const sectionContainerStyles = css`
 `
 
 export const sectionPadding = css`
-  padding: 3rem 6rem;
+  padding: 4rem 6rem;
 
   @media (max-width: 1225px) {
-    padding: 1.5rem 3rem;
+    padding: 2.5rem 3rem;
   }
 
   @media (max-width: 880px) {
-    padding: 2rem 3rem;
+    padding: 2.5rem 3rem;
   }
 
   @media (max-width: 715px) {
-    padding: 2rem 2rem;
+    padding: 2.5rem 2rem;
   }
 
   @media (max-width: 410px) {
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
   }
 `
 

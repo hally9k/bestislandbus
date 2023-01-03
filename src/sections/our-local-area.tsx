@@ -12,6 +12,8 @@ const ideasLinkStyles = css`
   color: green;
   text-decoration: none;
 
+  margin-bottom: 1rem;
+
   :hover {
     color: lightgreen;
 
@@ -55,6 +57,10 @@ const galleryTripleSection = css`
   grid-template-columns: 1fr 1fr 1fr;
 `
 
+const ideasItemStyles = css`
+  margin-bottom: 1rem;
+`
+
 export const OurLocalArea = () => <React.Fragment>
   <section css={sectionContainerStyles}>
     <section css={tertiarySectionStyles}>
@@ -81,16 +87,16 @@ export const OurLocalArea = () => <React.Fragment>
   <section css={sectionContainerStyles}>
     <section css={quartinarySectionStyles}>
       <h1 css={primaryBrandHeadingStyles}>a few ideas to get you started</h1>
-      <p><a css={ideasLinkStyles} href="https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/abel-tasman-national-park/?tab-id=50578" target="_blank" rel="noopener noreferrer">Abel Tasman National Park</a></p>
-      <p><a css={ideasLinkStyles} href="https://thesuter.org.nz" target="_blank" rel="noopener noreferrer">Suter Gallery and cafe in Nelson</a></p>
-      <p><a css={ideasLinkStyles} href="https://www.founderspark.co.nz" target="_blank" rel="noopener noreferrer">Founders Heritage Park</a></p>
-      <p><a css={ideasLinkStyles} href="https://www.cablebayadventurepark.com" target="_blank" rel="noopener noreferrer">Cable Bay Adventure Park</a></p>
-      <p><a css={ideasLinkStyles} href="http://www.nelson.govt.nz/recreation/recreation/parks-and-reserves/miyazu-garden/" target="_blank" rel="noopener noreferrer">Miyazu Japanese Gardens and Queens Gardens in Nelson Rabbit Island beach</a></p>
-      <p><a css={ideasLinkStyles} href="https://www.mapuawharf.co.nz" target="_blank" rel="noopener noreferrer">Mapua Wharf</a> ...ferry to <a css={ideasLinkStyles} href="https://www.nelsontasman.nz/visit-nelson-tasman/plan-your-trip/activities/3270-rabbit-island" target="_blank" rel="noopener noreferrer">Rabbit Island</a></p>
-      <p><a css={ideasLinkStyles} href="https://www.nelsontasman.nz/visit-nelson-tasman/destinations/takaka-and-golden-bay/" target="_blank" rel="noopener noreferrer">Takaka in Golden Bay</a></p>
-      <p><a css={ideasLinkStyles} href="https://www.connings.co.nz" target="_blank" rel="noopener noreferrer">Connings Food Market</a></p>
-      <p><a css={ideasLinkStyles} href="https://playhousecafe.co.nz" target="_blank" rel="noopener noreferrer">The Playhouse Cafe and theatre</a></p>
-      <p><a css={ideasLinkStyles} href="https://www.motuekasundaymarket.co.nz/" target="_blank" rel="noopener noreferrer">Local markets Nelson/Motueka</a></p>
+      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/abel-tasman-national-park/?tab-id=50578" target="_blank" rel="noopener noreferrer">Abel Tasman National Park</a></p>
+      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://thesuter.org.nz" target="_blank" rel="noopener noreferrer">Suter Gallery and cafe in Nelson</a></p>
+      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://www.founderspark.co.nz" target="_blank" rel="noopener noreferrer">Founders Heritage Park</a></p>
+      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://www.cablebayadventurepark.com" target="_blank" rel="noopener noreferrer">Cable Bay Adventure Park</a></p>
+      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="http://www.nelson.govt.nz/recreation/recreation/parks-and-reserves/miyazu-garden/" target="_blank" rel="noopener noreferrer">Miyazu Japanese Gardens and Queens Gardens in Nelson Rabbit Island beach</a></p>
+      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://www.mapuawharf.co.nz" target="_blank" rel="noopener noreferrer">Mapua Wharf</a> ...ferry to <a css={ideasLinkStyles} href="https://www.nelsontasman.nz/visit-nelson-tasman/plan-your-trip/activities/3270-rabbit-island" target="_blank" rel="noopener noreferrer">Rabbit Island</a></p>
+      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://www.nelsontasman.nz/visit-nelson-tasman/destinations/takaka-and-golden-bay/" target="_blank" rel="noopener noreferrer">Takaka in Golden Bay</a></p>
+      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://www.connings.co.nz" target="_blank" rel="noopener noreferrer">Connings Food Market</a></p>
+      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://playhousecafe.co.nz" target="_blank" rel="noopener noreferrer">The Playhouse Cafe and theatre</a></p>
+      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://www.motuekasundaymarket.co.nz/" target="_blank" rel="noopener noreferrer">Local markets Nelson/Motueka</a></p>
     </section>
     <aside css={asideStyles}>
     </aside>
