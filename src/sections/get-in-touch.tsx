@@ -126,11 +126,14 @@ const instaContainerStyles = css`
   margin-top: 1rem;
 ` 
 
+const getInTouchHeading = css`
+  color: white;
+`
 
 export const GetInTouch = () => <section css={galleryDoubleSection}>
   <div css={contactPanel}>
     <br />
-    <h4>Get in touch to find out more</h4>
+    <h4 css={getInTouchHeading}>Get in touch to find out more</h4>
     <br />
     <br />
     <div css={emailStyles}>
