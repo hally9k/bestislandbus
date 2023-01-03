@@ -16,22 +16,25 @@ const enquiryButtonContainerStyle = css`
 
   @media (max-width: 960px) {
     font-size: 1.5rem;
+    justify-content: center;
   }
 
   @media (max-width: 715px) {
     font-size: 1.2rem;
+    justify-content: center;
   }
 
   @media (max-width: 410px) {
     font-size: 1rem;
+    justify-content: center;
   }
 `
 
 const enquiryButtonStyles = css`
-  font-size: 3rem;
+  font-size: 1.6rem;
 
   @media (max-width: 1400px) {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   @media (max-width: 1200px) {

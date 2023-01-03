@@ -17,7 +17,7 @@ const imageContainerStyles = css`
 
 const gallerySection = css`
   display: grid;
-  height: 480px; 
+  /* height: 480px;  */
   width: 100%;
   overflow: hidden;
 `
@@ -93,6 +93,21 @@ const emailIconStyles = css`
   margin-right: 10px;
 `
 
+
+const instaLogoStyles = css`
+  height: 4rem;
+  width: 4rem;
+
+  > div {
+    height: 100%
+  }
+`
+
+const instaContainerStyles = css`
+  margin-top: 1rem;
+` 
+
+
 export const GetInTouch = () => <section css={galleryDoubleSection}>
   <div css={contactPanel}>
     <h4>Get in touch to find out more</h4>
@@ -108,6 +123,12 @@ export const GetInTouch = () => <section css={galleryDoubleSection}>
     </div>
     <br />
     <a>www.bestislandbus.nz</a>
+
+    <div css={instaContainerStyles}>
+     <a href="https:/instagram.com/bestislandbusnz">
+       <StaticImage src="../images/insta.png" alt="instagram logo" css={instaLogoStyles} />
+     </a>
+   </div>
   </div>
   <div css={imageGardenStyles}></div>
 </section>

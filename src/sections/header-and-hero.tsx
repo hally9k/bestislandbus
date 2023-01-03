@@ -32,36 +32,49 @@ const logoTextStyle = css`
   }
 `
 
+
 const textContainerStyles = css`
     max-width: 70rem;
-    padding: 0 5rem;
-    
+    padding: 0;
+
+    @media (max-width: 1400px) {
+      padding: 2rem 1rem;
+    }
+
     @media (max-width: 1200px) {
-      padding: 0 2rem;
+      padding: 2rem 1rem;
     }
 
     @media (max-width: 960px) {
-      padding: 0 1rem;
+      padding: 2rem 1rem;
     }
 
-    @media (max-width: 750px) {
-      padding: 0;
+    @media (max-width: 715px) {
+      padding: 2rem 1rem;
+    }
+
+    @media (max-width: 410px) {
+      padding: 2rem 1rem;
     }
 
     > * {
       font-weight: 200;
-      font-size: 2rem;
+      font-size: 1.5rem;
+
+      @media (max-width: 1400px) {
+        font-size: 1.2rem;
+      }
 
       @media (max-width: 1200px) {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
 
       @media (max-width: 960px) {
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
 
       @media (max-width: 715px) {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
 
       @media (max-width: 410px) {
@@ -72,7 +85,7 @@ const textContainerStyles = css`
     > h1, h2 {
       font-weight: 400;
 
-      font-size: 3rem;
+      font-size: 2rem;
 
       text-align: center;
       padding-left: 5rem;
@@ -102,6 +115,14 @@ const textContainerStyles = css`
     }
 `
 
+const introHeading = css`
+  @media (min-width: 1200px) {
+    text-align: left !important;
+    padding-left: 0 !important;
+  }
+
+`
+
 export const HeaderAndHero = () => <React.Fragment>
   <div css={headerStyle}>
     <div css={logoWrapperStyle}>
@@ -111,11 +132,11 @@ export const HeaderAndHero = () => <React.Fragment>
     <StaticImage src="../images/hero.jpg" alt="beautiful orange bus by the water"></StaticImage>
   </div>
   <section css={primarySectionStyles}>
-    <h2>the enchantment of a vintage stay <br /> in a truly unspoilt place</h2>
+    <h1>the enchantment of a vintage stay <br /> in a truly unspoilt place</h1>
   </section>
   <section css={secondarySectionStyles}>
     <div css={textContainerStyles}>
-      <h2>The Best Island Bus sits on the shores of the Waimea Estuary near Nelson, on New Zealand’s 
+      <h2 css={introHeading}>The Best Island Bus sits on the shores of the Waimea Estuary near Nelson, on New Zealand’s 
         stunning South Island</h2>
       <p>This classic bus is surrounded by the ever changing landscape of the estuary, with its diverse 
         wildlife and dramatic views to the velvety hills of the Richmond Ranges. In the summer months the 

@@ -9,30 +9,26 @@ import bikingImg from '../images/biking.jpg'
 import beachImg from '../images/beach.jpg'
 
 const whatWeOfferSectionStyles = css`
-    padding: 3rem 6rem;
+    padding: 2rem 4rem;
     max-width: 70rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 200;
 
-  @media (max-width: 1225px) {
-    font-size: 1.6rem;
-    padding: 1.5rem 3rem;
-  }
+    @media (max-width: 1200px) {
+      font-size: 1.5rem;
+    }
 
-  @media (max-width: 880px) {
-    font-size: 1.5rem;
-    padding: 1.5rem 3rem;
-  }
+    @media (max-width: 960px) {
+      font-size: 1.5rem;
+    }
 
-  @media (max-width: 715px) {
-    font-size: 1rem;
-    padding: 1rem 2rem;
-  }
+    @media (max-width: 715px) {
+      font-size: 1.2rem;
+    }
 
-  @media (max-width: 410px) {
-    font-size: 0.8rem;
-    padding: 0.5rem 1rem;
-  }
+    @media (max-width: 410px) {
+      font-size: 1rem;
+    }
 `
 
 const videoStyles = css`

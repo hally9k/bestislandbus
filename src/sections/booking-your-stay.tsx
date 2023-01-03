@@ -61,11 +61,36 @@ const infoBodyStyles = css`
   padding: 1rem 3rem;
 `
 
+const bookHereStyles = css`
+  padding: 3rem 3rem;; 
+  display: flex;
+
+  align-items: center;
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 1350px) {
+    h1 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    display: block;
+  }
+`
+
+const buttonContainerStyles = css`
+ padding: 0 2rem 0 2rem;
+`
+
 export const BookingYourStay = () => <React.Fragment>
   <section css={sectionContainerStyles}>
-    <section css={quartinarySectionStyles}>
-      <h5>You can book your Best Island Bus stay here</h5>
-      <EnquiryButton/>
+    <section css={bookHereStyles}>
+      <h1>You can book your Best Island Bus stay here</h1>
+      <div css={buttonContainerStyles}>
+        <EnquiryButton/>
+      </div>
       </section>
     <aside css={asideStyles}>
     </aside>
