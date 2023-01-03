@@ -12,6 +12,7 @@ import { OurLocalArea } from '../sections/our-local-area'
 import { BookingYourStay } from '../sections/booking-your-stay'
 import { FindingUs } from '../sections/finding-us'
 import { GetInTouch } from '../sections/get-in-touch'
+import React from 'react'
 
 const pageStyles = {
   color: "#232129",
@@ -67,4 +68,4 @@ const IndexPage = () => <Layout>
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Best Island Bus</title>
+export const Head: HeadFC = () => <React.Fragment><title>Best Island Bus</title><base href="https://hally9k.github.io/bestislandbus/" target="_blank" /></React.Fragment>
