@@ -6,7 +6,6 @@ import { primarySectionStyles, secondarySectionStyles } from '../styles/section'
 import { Logo } from '../components/logo'
 import { StaticImage } from 'gatsby-plugin-image'
 import { EnquiryButton } from '../components/enquiry-button'
-import logoSvg from '../images/logo.svg'
 
 const headerStyle = css`
 `

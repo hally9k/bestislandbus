@@ -68,4 +68,4 @@ const IndexPage = () => <Layout>
 
 export default IndexPage
 
-export const Head: HeadFC = () => <React.Fragment><title>Best Island Bus</title><base href="https://hally9k.github.io/bestislandbus/" target="_blank" /></React.Fragment>
+export const Head: HeadFC = () => <title>Best Island Bus</title>
