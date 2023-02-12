@@ -167,7 +167,7 @@ export const GetInTouch = () => <section css={galleryDoubleSection}>
     <a href="#">www.bestislandbus.nz</a>
 
     <div css={footerItemContainerStyles}>
-     <a href="https:/instagram.com/bestislandbusnz">
+     <a href="https://instagram.com/bestislandbusnz">
        <StaticImage src="../images/insta.png" alt="instagram logo" css={footerItemStyles} />
      </a>
        <StaticImage src="../images/eco.png" alt="eco friendly logo" css={footerItemStyles} />
