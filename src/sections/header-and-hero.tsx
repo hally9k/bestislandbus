@@ -33,7 +33,6 @@ const logoTextStyle = css`
 `
 
 const introHeading = css`
-  font-size: 1rem;
   margin: 1rem 0 2rem;
   line-height: 1.2;
 
