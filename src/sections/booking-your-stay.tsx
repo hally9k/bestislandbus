@@ -6,7 +6,7 @@ import { tertiarySectionStyles, sectionContainerStyles, asideStyles } from '../s
 import { primaryBrandHeadingStyles } from '../styles/typeography'
 import { EnquiryButton } from '../components/enquiry-button'
 import { Logo } from '../components/logo'
-import bedImg from '../images/bed.jpg'
+import bedImg from '../images/bedroom.jpg'
 import indicatorImg from '../images/indicator.jpg'
 
 import React from 'react'

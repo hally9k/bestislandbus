@@ -10,6 +10,7 @@ export const baselineStyles = css`
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
   }
   html {
     box-sizing: border-box;
@@ -30,7 +31,7 @@ export const baselineStyles = css`
     margin: 0;
     /* overflow-x: hidden;
     overflow-y: hidden; */
-    font: 16px/1 sans-serif;
+    font: 16px/1.5 sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
   }

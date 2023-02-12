@@ -6,6 +6,7 @@ export const primaryBrandHeadingStyles = css`
   font-family: 'Marcellus', serif;
   color: ${colorBrandPrimary};
   font-size: 4rem;
+  line-height: 1.2;
 
   margin: 1rem 0 2rem;
 

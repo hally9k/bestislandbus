@@ -2,20 +2,18 @@
 import { jsx, SerializedStyles } from "@emotion/react"
 
 interface Props {
-  videoSrcURL: string,
   videoTitle: string,
   css: SerializedStyles
 }
 
-export const Video: React.FC<Props> = ({ videoSrcURL, videoTitle, css }) =>
+export const Video: React.FC<Props> = ({ videoTitle, css }) =>
     <iframe
       css={css}
-      src={videoSrcURL}
+      src="https://www.youtube.com/embed/H-lF_6IJ4u8?controls=0&autoplay=1&loop=1"
       title={videoTitle}
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       frameBorder="0"
       allowFullScreen={false}
       height="100%"
       width="100%"
     />
-

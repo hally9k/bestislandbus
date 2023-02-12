@@ -34,6 +34,7 @@ const logoTextStyle = css`
 
 const introHeading = css`
   margin: 1rem 0 2rem;
+  line-height: 1.2;
 
   @media (min-width: 1200px) {
     text-align: left !important;

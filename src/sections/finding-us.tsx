@@ -20,6 +20,7 @@ const mapContainerStyles = css`
   width: 100%;
   height: 100%;
   flex-grow: 1;
+  flex-direction: column;
   display: flex;
   justify-content: center;
 `
@@ -40,9 +41,13 @@ const directionsStyle = css`
 export const FindingUs = () => 
 <section css={sectionStyles}>
   <div css={mapContainerStyles}>
+  <div>
     <a href="https://goo.gl/maps/8hjrQeo9gzhoay5G7">
       <StaticImage src="../images/map.jpg" alt="map" css={mapStyles} />
     </a>
+    </div>
+    <div>
+      <p css={directionsStyle}>Ignore the NO ENTRY sign then follow the orange signs</p>
+    </div>
   </div>
-  <p css={directionsStyle}>Ignore the NO ENTRY sign then follow the orange signs</p>
 </section>

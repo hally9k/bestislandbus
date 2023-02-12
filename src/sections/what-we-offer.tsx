@@ -3,7 +3,6 @@ import { jsx, css } from '@emotion/react'
 import { primaryBrandHeadingStyles } from '../styles/typeography'
 import { secondarySectionStyles } from '../styles/section'
 import React from 'react'
-import waterVideo from '../images/water.mp4'
 import { Video } from '../components/video'
 import bikingImg from '../images/biking.jpg'
 import beachImg from '../images/beach.jpg'
@@ -75,9 +74,9 @@ export const WhatWeOffer = () => <React.Fragment>
         <div css={videoContainerStyles}>
           <Video
             css={videoStyles}
-            videoSrcURL={waterVideo}
             videoTitle='Water'
           ></Video>
+          {/* <iframe width="100%" height="10%" src="https://www.youtube.com/embed/H-lF_6IJ4u8?autoplay=1&loop=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
         </div>
         <div css={imageBikingStyles}>
         </div>
