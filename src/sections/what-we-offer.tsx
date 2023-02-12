@@ -3,17 +3,18 @@ import { jsx, css } from '@emotion/react'
 import { primaryBrandHeadingStyles } from '../styles/typeography'
 import { secondarySectionStyles } from '../styles/section'
 import React from 'react'
-import { Video } from '../components/video'
+// import { Video } from '../components/video'
 import bikingImg from '../images/biking.jpg'
 import beachImg from '../images/beach.jpg'
+import kayakingImg from '../images/kayaking.jpg'
 
-const videoStyles = css`
-  flex-grow: 1; border: none; margin: 0; padding: 0;
-`
+// const videoStyles = css`
+//   flex-grow: 1; border: none; margin: 0; padding: 0;
+// `
 
-const videoContainerStyles = css`
-  display: flex; width: 100%; height: 100%; flex-direction: column; background-color: blue; overflow: hidden;
-`
+// const videoContainerStyles = css`
+//   display: flex; width: 100%; height: 100%; flex-direction: column; background-color: blue; overflow: hidden;
+// `
 
 const imageContainerStyles = css`
   height: 100%;
@@ -22,6 +23,12 @@ const imageContainerStyles = css`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+`
+
+const imageKayakingStyles = css`
+  background-image: url(${kayakingImg});
+
+  ${imageContainerStyles}
 `
 
 const imageBikingStyles = css`
@@ -71,12 +78,13 @@ export const WhatWeOffer = () => <React.Fragment>
         <br /><h1 css={primaryBrandHeadingStyles}>ride the bike trail to Rabbit Island<br />or kayak up the estuary</h1>
       </section>
       <section css={galleryVideoHackSection}>
-        <div css={videoContainerStyles}>
+        {/* <div css={videoContainerStyles}>
           <Video
             css={videoStyles}
             videoTitle='Water'
           ></Video>
-          {/* <iframe width="100%" height="10%" src="https://www.youtube.com/embed/H-lF_6IJ4u8?autoplay=1&loop=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
+        </div> */}
+        <div css={imageKayakingStyles}>
         </div>
         <div css={imageBikingStyles}>
         </div>
