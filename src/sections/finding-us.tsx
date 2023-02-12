@@ -33,6 +33,10 @@ const sectionStyles = css`
   }
 `
 
+const directionsStyle = css`
+  padding: 1rem;
+`
+
 export const FindingUs = () => 
 <section css={sectionStyles}>
   <div css={mapContainerStyles}>
@@ -40,4 +44,5 @@ export const FindingUs = () =>
       <StaticImage src="../images/map.jpg" alt="map" css={mapStyles} />
     </a>
   </div>
+  <p css={directionsStyle}>Ignore the NO ENTRY sign then follow the orange signs</p>
 </section>

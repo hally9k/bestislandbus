@@ -5,6 +5,7 @@ import { colorBrandPrimary } from '../styles/color'
 import { StaticImage } from 'gatsby-plugin-image'
 
 import gardenImg from '../images/garden.jpg'
+import ecoImg from '../images/eco.png'
 
 const imageContainerStyles = css`
   height: 100%;
@@ -113,7 +114,7 @@ const emailIconStyles = css`
 `
 
 
-const instaLogoStyles = css`
+const footerItemStyles = css`
   height: 4rem;
   width: 4rem;
 
@@ -122,8 +123,10 @@ const instaLogoStyles = css`
   }
 `
 
-const instaContainerStyles = css`
+const footerItemContainerStyles = css`
   margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
 ` 
 
 const getInTouchHeading = css`
@@ -163,11 +166,14 @@ export const GetInTouch = () => <section css={galleryDoubleSection}>
     <br />
     <a href="#">www.bestislandbus.nz</a>
 
-    <div css={instaContainerStyles}>
+    <div css={footerItemContainerStyles}>
      <a href="https:/instagram.com/bestislandbusnz">
-       <StaticImage src="../images/insta.png" alt="instagram logo" css={instaLogoStyles} />
+       <StaticImage src="../images/insta.png" alt="instagram logo" css={footerItemStyles} />
      </a>
+       <StaticImage src="../images/eco.png" alt="eco friendly logo" css={footerItemStyles} />
+       <StaticImage src="../images/logo.svg" alt="best island bus logo" css={footerItemStyles} />
    </div>
+
   </div>
   <div css={imageGardenStyles}></div>
 </section>

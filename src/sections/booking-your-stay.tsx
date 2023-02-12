@@ -192,7 +192,7 @@ export const BookingYourStay = () => <React.Fragment>
       </p>
       <div css={infoTitleStyles}>Tariffs</div>
       <p css={infoBodyStyles}>
-        <strong>$225/night. Minimum two nights booking.</strong><br />
+        <strong>$194/night.</strong><br />
         Please be aware that The Best Island Bus is only available from October 1st - June 30th every year.
         <br /><br />Unfortunately there is no disabled access and we are unable to cater for pets. We can cater for one extra person;
         please contact us for further details.

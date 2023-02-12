@@ -1,4 +1,6 @@
 /** @jsx jsx */
+import React from 'react'
+
 import { colorBrandPrimary, colorBaseWhite } from '../styles/color'
 
 import { jsx, css } from '@emotion/react'
@@ -12,7 +14,7 @@ import { OurLocalArea } from '../sections/our-local-area'
 import { BookingYourStay } from '../sections/booking-your-stay'
 import { FindingUs } from '../sections/finding-us'
 import { GetInTouch } from '../sections/get-in-touch'
-import React from 'react'
+import { GuestBook } from '../sections/guest-book'
 
 const pageStyles = {
   color: "#232129",
@@ -66,6 +68,10 @@ const IndexPage = () => <Layout>
         <h2 css={dividertextStyles}>our local area</h2>
       </div>
       <OurLocalArea/>
+      <div css={dividerStyles}>
+        <h2 css={dividertextStyles}>guest book</h2>
+      </div>
+      <GuestBook />
       <div css={dividerStyles}>
         <h2 css={dividertextStyles}>booking your stay</h2>
       </div>
