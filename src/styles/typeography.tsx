@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 import { colorBrandPrimary } from './color'
 
 export const primaryBrandHeadingStyles = css`
-  font-family: 'GFS Didot', serif;
+  font-family: 'Marcellus', serif;
   color: ${colorBrandPrimary};
   font-size: 4rem;
 

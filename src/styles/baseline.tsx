@@ -1,14 +1,15 @@
 import { css } from '@emotion/react'
 
 export const baselineStyles = css`
-  @import url('https://fonts.googleapis.com/css2?family=Arimo&family=GFS+Didot&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
   html,
   body,
   #root {
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: 'Mulish', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
   html {
     box-sizing: border-box;

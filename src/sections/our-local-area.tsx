@@ -61,13 +61,17 @@ const ideasItemStyles = css`
   margin-bottom: 1rem;
 `
 
+const nelsonLink = css`
+  color: darkgray;
+`
+
 export const OurLocalArea = () => <React.Fragment>
   <section css={sectionContainerStyles}>
     <section css={tertiarySectionStyles}>
       <p>
         Nelson really is a buzzing, vibrant town, compact enough to ramble around over a long weekend but with lots more further afield. Spend a day in the Abel Tasman National Park with its turquoise waters and easy walking trail, head south to the Nelson Lakes or explore the local wineries and breweries.
       </p> 
-      <h1 css={primaryBrandHeadingStyles}>take time out to explore <a href="https://nelsontasman.nz">nelsontasman.nz</a></h1>
+      <h1 css={primaryBrandHeadingStyles}>take time out to explore <a href="https://nelsontasman.nz" css={nelsonLink}>nelsontasman.nz</a></h1>
       <p>Hopping in one of our kayaks and paddling up the the estuary is a great way to start the day! You will see a variety of wading birds including the rare White Heron if you’re lucky and possibly a stingray on an out-going tide. The Great Taste Trail runs close by,
         a cruisy bike trail that takes you across swing bridges and through farmland and on towards Rabbit island, where you can take the ferry across to Mapua for lunch.
       </p>
@@ -91,8 +95,9 @@ export const OurLocalArea = () => <React.Fragment>
       <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://thesuter.org.nz" target="_blank" rel="noopener noreferrer">Suter Gallery and cafe in Nelson</a></p>
       <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://www.founderspark.co.nz" target="_blank" rel="noopener noreferrer">Founders Heritage Park</a></p>
       <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://www.cablebayadventurepark.com" target="_blank" rel="noopener noreferrer">Cable Bay Adventure Park</a></p>
-      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="http://www.nelson.govt.nz/recreation/recreation/parks-and-reserves/miyazu-garden/" target="_blank" rel="noopener noreferrer">Miyazu Japanese Gardens and Queens Gardens in Nelson Rabbit Island beach</a></p>
-      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://www.mapuawharf.co.nz" target="_blank" rel="noopener noreferrer">Mapua Wharf</a> ...ferry to <a css={ideasLinkStyles} href="https://www.nelsontasman.nz/visit-nelson-tasman/plan-your-trip/activities/3270-rabbit-island" target="_blank" rel="noopener noreferrer">Rabbit Island</a></p>
+      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="http://www.nelson.govt.nz/recreation/recreation/parks-and-reserves/miyazu-garden/" target="_blank" rel="noopener noreferrer">Miyazu Japanese Gardens</a> and <a css={ideasLinkStyles} href="http://www.nelson.govt.nz/recreation/recreation/parks-and-reserves/queens-garden/" target="_blank" rel="noopener noreferrer">Queens Gardens</a> in Nelson</p>
+      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://www.nelsontasman.nz/visit-nelson-tasman/plan-your-trip/activities/3270-rabbit-island" target="_blank" rel="noopener noreferrer">Rabbit Island beach</a></p>
+      <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://www.mapuawharf.co.nz" target="_blank" rel="noopener noreferrer">Mapua Wharf</a> ... <a css={ideasLinkStyles} href="http://mapuaferry.co.nz/" target="_blank" rel="noopener noreferrer">Ferry</a> to Rabbit Island</p>
       <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://www.nelsontasman.nz/visit-nelson-tasman/destinations/takaka-and-golden-bay/" target="_blank" rel="noopener noreferrer">Takaka in Golden Bay</a></p>
       <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://www.connings.co.nz" target="_blank" rel="noopener noreferrer">Connings Food Market</a></p>
       <p css={ideasItemStyles}><a css={ideasLinkStyles} href="https://playhousecafe.co.nz" target="_blank" rel="noopener noreferrer">The Playhouse Cafe and theatre</a></p>
