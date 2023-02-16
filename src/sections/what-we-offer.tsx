@@ -70,7 +70,6 @@ export const WhatWeOffer = () => <React.Fragment>
           <li><strong>kayaking....</strong> you can kayak onto the estuary a few metres from the end of the garden on a high tide. Kayaks available.</li>
           <li><strong>biking....</strong> the Great Taste Trail.... we can drop you off and pick you up. Bikes available.</li>
           <li><strong>walk</strong> the beaches around the island</li>
-          <li><strong>packed lunches...</strong> a nourishing option when out and about</li>
           <li><strong>special occasion gifts....</strong> you can chat to us about these prior to arrival</li>
           <li><strong>takeaways</strong> for late arrivals</li>
           <li><strong>play golf</strong> on the island a few minutes away</li>
