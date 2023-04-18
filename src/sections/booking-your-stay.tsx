@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
+import React from 'react'
 
 import { colorBrandPrimary, colorBaseWhite, colorShadePrimary } from '../styles/color'
 import { tertiarySectionStyles, sectionContainerStyles, asideStyles } from '../styles/section'
@@ -8,8 +9,8 @@ import { EnquiryButton } from '../components/enquiry-button'
 import { Logo } from '../components/logo'
 import bedImg from '../images/bedroom.jpg'
 import indicatorImg from '../images/indicator.jpg'
+import { Button } from '../components/button'
 
-import React from 'react'
 
 const imageContainerStyles = css`
   height: 100%;
@@ -132,7 +133,10 @@ const bookHereStyles = css`
 `
 
 const buttonContainerStyles = css`
- padding: 0 2rem 0 2rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 2rem 0 2rem;
 `
 
 const infoSectionStyles = css`
@@ -161,11 +165,40 @@ const bookingAsideStyles = css`
   background-color: ${colorShadePrimary};
 `
 
-export const BookingYourStay = () => <React.Fragment>
+const calButtonStyles = css`
+  margin-right: 0.5rem;
+  font-size: 1.6rem;
+
+  @media (max-width: 1400px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 960px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 715px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 410px) {
+    font-size: 1rem;
+  }
+`
+
+export const BookingYourStay = () => {
+  return <React.Fragment>
   <section css={sectionContainerStyles}>
     <section css={bookHereStyles}>
       <h1>You can book your Best Island Bus stay here</h1>
       <div css={buttonContainerStyles}>
+        <a href="https://calendar.google.com/calendar/embed?src=relax%40bestislandbus.nz&ctz=Pacific%2FAuckland" target="_blank" rel="noopener">
+          <Button text="check availability" onClick={() => {}} styles={calButtonStyles}></Button>
+        </a>
         <EnquiryButton/>
       </div>
       </section>
@@ -229,3 +262,4 @@ export const BookingYourStay = () => <React.Fragment>
     </div>
   </section>
 </React.Fragment>
+}

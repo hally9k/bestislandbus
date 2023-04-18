@@ -7,6 +7,65 @@ import { primaryBrandHeadingStyles, secondaryBodyTextStyles } from '../styles/ty
 import { Logo } from '../components/logo'
 import { StaticImage } from 'gatsby-plugin-image'
 import { EnquiryButton } from '../components/enquiry-button'
+import { Button } from '../components/button'
+
+
+const innerContainer = css`
+  display: flex;
+  flex-direction: column;
+`
+
+const calButtonContainerStyle = css`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+
+  @media (max-width: 1200px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 960px) {
+    font-size: 1.5rem;
+    justify-content: center;
+  }
+
+  @media (max-width: 715px) {
+    font-size: 1.2rem;
+    justify-content: center;
+  }
+
+  @media (max-width: 410px) {
+    font-size: 1rem;
+    justify-content: center;
+  }
+`
+
+
+const calButtonStyles = css`
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+
+  @media (max-width: 1400px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 960px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 715px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 410px) {
+    font-size: 1rem;
+  }
+`
 
 const headerStyle = css`
 `
@@ -60,6 +119,13 @@ export const HeaderAndHero = () => <React.Fragment>
         wildlife and dramatic views to the velvety hills of the Richmond Ranges. In the summer months the 
         beautiful evening sun nearly always turns into an eye-popping sunset and in the cooler months the snow 
         capped peaks of the Kahurangis are clearly visible on the horizon</p>
-      <EnquiryButton/>
+      <div css={calButtonContainerStyle}>
+        <div css={innerContainer}>
+          <a href="https://calendar.google.com/calendar/embed?src=relax%40bestislandbus.nz&ctz=Pacific%2FAuckland" target="_blank" rel="noopener">
+            <Button text="check availability" onClick={() => {}} styles={calButtonStyles}></Button>
+          </a>
+          <EnquiryButton/>
+        </div>
+      </div>
   </section>
 </React.Fragment>
