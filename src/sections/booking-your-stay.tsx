@@ -230,6 +230,7 @@ export const BookingYourStay = () => {
         <br /><br />Unfortunately there is no disabled access and we are unable to cater for pets. We can cater for one extra person;
         please contact us for further details.
       </p>
+      
       <div css={infoTitleStyles}>Arrival/Departure times</div>
       <p css={infoBodyStyles}>
         <strong>Check in time 2pm</strong><br />
