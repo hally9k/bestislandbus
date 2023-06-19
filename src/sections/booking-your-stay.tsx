@@ -99,26 +99,6 @@ const infoBodyStyles = css`
   }
 `
 
-const specialStyles = css`
-  padding: 1rem 6rem;
-
-  @media (max-width: 1225px) {
-    padding: 1rem 3rem;
-  }
-
-  @media (max-width: 880px) {
-    padding: 1rem 3rem;
-  }
-
-  @media (max-width: 715px) {
-    padding: 1rem 2rem;
-  }
-
-  @media (max-width: 410px) {
-    padding: 0.5rem 1rem;
-  }
-`
-
 const bookHereStyles = css`
   padding: 3rem 6rem;
 
