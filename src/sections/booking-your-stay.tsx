@@ -2,15 +2,22 @@
 import { jsx, css } from '@emotion/react'
 import React from 'react'
 
-import { colorBrandPrimary, colorBaseWhite, colorShadePrimary } from '../styles/color'
-import { tertiarySectionStyles, sectionContainerStyles, asideStyles } from '../styles/section'
+import {
+  colorBrandPrimary,
+  colorBaseWhite,
+  colorShadePrimary,
+} from '../styles/color'
+import {
+  tertiarySectionStyles,
+  sectionContainerStyles,
+  asideStyles,
+} from '../styles/section'
 import { primaryBrandHeadingStyles } from '../styles/typeography'
 import { EnquiryButton } from '../components/enquiry-button'
 import { Logo } from '../components/logo'
 import bedImg from '../images/bedroom.jpg'
 import indicatorImg from '../images/indicator.jpg'
 import { Button } from '../components/button'
-
 
 const imageContainerStyles = css`
   height: 100%;
@@ -23,7 +30,7 @@ const imageContainerStyles = css`
 
 const gallerySection = css`
   display: grid;
-  height: 480px; 
+  height: 480px;
   width: 100%;
   overflow: hidden;
 `
@@ -96,7 +103,7 @@ const bookHereStyles = css`
   padding: 3rem 6rem;
 
   @media (max-width: 1225px) {
-    padding:3rem 3rem;
+    padding: 3rem 3rem;
   }
 
   @media (max-width: 880px) {
@@ -110,7 +117,7 @@ const bookHereStyles = css`
   @media (max-width: 410px) {
     padding: 3rem 1rem;
   }
-  
+
   display: flex;
   width: 100%;
 
@@ -129,7 +136,6 @@ const bookHereStyles = css`
       text-align: center;
     }
   }
-
 `
 
 const buttonContainerStyles = css`
@@ -191,76 +197,112 @@ const calButtonStyles = css`
 `
 
 export const BookingYourStay = () => {
-  return <React.Fragment>
-  <section css={sectionContainerStyles}>
-    <section css={bookHereStyles}>
-      <h1>You can book your Best Island Bus stay here</h1>
-      <div css={buttonContainerStyles}>
-        <a href="https://calendar.google.com/calendar/embed?src=relax%40bestislandbus.nz&ctz=Pacific%2FAuckland" target="_blank" rel="noopener">
-          <Button text="check availability" onClick={() => {}} styles={calButtonStyles}></Button>
-        </a>
-        <EnquiryButton/>
-      </div>
+  return (
+    <React.Fragment>
+      <section css={sectionContainerStyles}>
+        <section css={bookHereStyles}>
+          <h1>You can book your Best Island Bus stay here</h1>
+          <div css={buttonContainerStyles}>
+            <a
+              href="https://calendar.google.com/calendar/embed?src=relax%40bestislandbus.nz&ctz=Pacific%2FAuckland"
+              target="_blank"
+              rel="noopener"
+            >
+              <Button
+                text="check availability"
+                onClick={() => {}}
+                styles={calButtonStyles}
+              ></Button>
+            </a>
+            <EnquiryButton />
+          </div>
+        </section>
+        <aside css={asideStyles}></aside>
       </section>
-    <aside css={asideStyles}>
-    </aside>
-  </section>
 
-  <section css={sectionContainerStyles}>
-    <section css={infoSectionStyles}>
-      <br />
-      <p css={infoBodyStyles}>We manage our bookings and enquiries personally. We endeavour to be in touch as soon as possible.</p>
-      <p css={infoBodyStyles}>There are discounted rates for longer stays. All reservations are subject to confirmation.</p>
+      <section css={sectionContainerStyles}>
+        <section css={infoSectionStyles}>
+          <br />
+          <p css={infoBodyStyles}>
+            We manage our bookings and enquiries personally. We endeavour to be
+            in touch as soon as possible.
+          </p>
+          <p css={infoBodyStyles}>
+            There are discounted rates for longer stays. All reservations are
+            subject to confirmation.
+          </p>
 
-      <div css={infoTitleStyles}>Payment</div>
-      <p css={infoBodyStyles}>
-        <strong>Once your booking is agreed we will send you an invoice with all the details</strong>
-        <br />
-        <br />
-        You can pay for your accommodation online with:
-        <ul>
-          <li>Credit card through <strong>PayPal</strong></li>
-          <li><strong>Direct Credit</strong> - NZ Bank account required</li>
-        </ul>
-      </p>
-      <div css={infoTitleStyles}>Tariffs</div>
-      <p css={infoBodyStyles}>
-        <strong>$194/night.</strong><br />
-        Please be aware that The Best Island Bus is only available from October 1st - June 30th every year.
-        <br /><br />Unfortunately there is no disabled access and we are unable to cater for pets. We can cater for one extra person;
-        please contact us for further details.
-      </p>
-      
-      <div css={infoTitleStyles}>Arrival/Departure times</div>
-      <p css={infoBodyStyles}>
-        <strong>Check in time 2pm</strong><br />
-        <strong>Check out time 11am</strong><br />
-        If you need to come earlier or leave later let us know and we’ll see what we can do.
-      </p>
-      <div css={infoTitleStyles}>Deposits & Payment</div>
-      <p css={infoBodyStyles}>
-        A <strong>50% deposit</strong> is required to secure your booking.<br />
-        The full balance payment is required 14 days prior to arrival.
-      </p>
-      <div css={infoTitleStyles}>Cancellations*</div>
-      <p css={infoBodyStyles}>
-        Cancellations within 28 days of arrival date<br />
-        50% of deposit to be retained<br /><br />
-        Cancellation within 21 days of arrival date<br />
-        100% of deposit to be retained<br /><br />
-        <span css={primaryBrandHeadingStyles}>*</span><sub>Any transaction fees will be deducted from reimbursements</sub>
-      </p>
-      <br />
-    </section>
-    <aside css={bookingAsideStyles}>
-    <Logo/>
-    </aside>
-  </section>
-  <section css={galleryDoubleSection}>
-    <div css={imageBedStyles}>
-    </div>
-    <div css={imageIndicatorStyles}>
-    </div>
-  </section>
-</React.Fragment>
+          <div css={infoTitleStyles}>Payment</div>
+          <p css={infoBodyStyles}>
+            <strong>
+              Once your booking is agreed we will send you an invoice with all
+              the details
+            </strong>
+            <br />
+            <br />
+            You can pay for your accommodation online with:
+            <ul>
+              <li>
+                Credit card through <strong>PayPal</strong>
+              </li>
+              <li>
+                <strong>Direct Credit</strong> - NZ Bank account required
+              </li>
+            </ul>
+          </p>
+          <div css={infoTitleStyles}>Tariffs</div>
+          <p css={infoBodyStyles}>
+            <strong>$200/night.</strong>
+            <br />
+            Please be aware that The Best Island Bus is only available from
+            October 1st - June 30th every year.
+            <br />
+            <br />
+            Unfortunately there is no disabled access and we are unable to cater
+            for pets. We can cater for one extra person; please contact us for
+            further details.
+          </p>
+
+          <div css={infoTitleStyles}>Arrival/Departure times</div>
+          <p css={infoBodyStyles}>
+            <strong>Check in time 2pm</strong>
+            <br />
+            <strong>Check out time 11am</strong>
+            <br />
+            If you need to come earlier or leave later let us know and we’ll see
+            what we can do.
+          </p>
+          <div css={infoTitleStyles}>Deposits & Payment</div>
+          <p css={infoBodyStyles}>
+            A <strong>50% deposit</strong> is required to secure your booking.
+            <br />
+            The full balance payment is required 14 days prior to arrival.
+          </p>
+          <div css={infoTitleStyles}>Cancellations*</div>
+          <p css={infoBodyStyles}>
+            Cancellations within 28 days of arrival date
+            <br />
+            50% of deposit to be retained
+            <br />
+            <br />
+            Cancellation within 21 days of arrival date
+            <br />
+            100% of deposit to be retained
+            <br />
+            <br />
+            <span css={primaryBrandHeadingStyles}>*</span>
+            <sub>Any transaction fees will be deducted from reimbursements</sub>
+          </p>
+          <br />
+        </section>
+        <aside css={bookingAsideStyles}>
+          <Logo />
+        </aside>
+      </section>
+      <section css={galleryDoubleSection}>
+        <div css={imageBedStyles}></div>
+        <div css={imageIndicatorStyles}></div>
+      </section>
+    </React.Fragment>
+  )
 }
