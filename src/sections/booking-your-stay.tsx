@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import {
   colorBrandPrimary,
@@ -217,6 +217,14 @@ const calButtonStyles = css`
 `
 
 export const BookingYourStay = () => {
+  const [isClient, setClient] = useState(false)
+
+  useEffect(() => {
+    setClient(true)
+  }, [])
+
+  const key = isClient ? `client` : `server`
+
   return (
     <React.Fragment>
       <section css={sectionContainerStyles}>
@@ -261,7 +269,7 @@ export const BookingYourStay = () => {
             <br />
             <br />
             You can pay for your accommodation online with:
-            <ul>
+            <ul key={key}>
               <li>
                 Credit card through <strong>PayPal</strong>
               </li>
@@ -271,7 +279,7 @@ export const BookingYourStay = () => {
             </ul>
           </p>
           <div css={infoTitleStyles}>Tariffs</div>
-          <p css={specialStyles}>
+          <p css={infoBodyStyles} key={key}>
             <strong>$200/night.</strong>
             <br />
             Please be aware that The Best Island Bus is only available from
