@@ -261,10 +261,10 @@ export const BookingYourStay = () => {
           <div css={infoTitleStyles}>Tariffs</div>
           <p css={infoBodyStyles} key={key}>
             <strong>$200/night.</strong>
-            <br />
+            {/* <br />
             Please be aware that The Best Island Bus is only available from
             October 1st - June 30th every year.
-            <br />
+            <br /> */}
             <br />
             Unfortunately there is no disabled access and we are unable to cater
             for pets. We can cater for one extra person; please contact us for
