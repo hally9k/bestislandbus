@@ -260,7 +260,7 @@ export const BookingYourStay = () => {
           </p>
           <div css={infoTitleStyles}>Tariffs</div>
           <p css={infoBodyStyles} key={key}>
-            <strong>$200/night.</strong>
+            <strong>$235/night.</strong>
             {/* <br />
             Please be aware that The Best Island Bus is only available from
             October 1st - June 30th every year.
