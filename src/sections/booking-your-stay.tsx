@@ -281,22 +281,12 @@ export const BookingYourStay = () => {
             what we can do.
           </p>
           <div css={infoTitleStyles}>Deposits & Payment</div>
-          <p css={infoBodyStyles}>
-            A <strong>50% deposit</strong> is required to secure your booking.
-            <br />
-            The full balance payment is required 14 days prior to arrival.
-          </p>
+          <p css={infoBodyStyles}>Full payment is required on booking.</p>
           <div css={infoTitleStyles}>Cancellations*</div>
           <p css={infoBodyStyles}>
-            Cancellations within 28 days of arrival date
+            Full refund for cancellations more than 60 days before check-in.
             <br />
-            50% of deposit to be retained
-            <br />
-            <br />
-            Cancellation within 21 days of arrival date
-            <br />
-            100% of deposit to be retained
-            <br />
+            No refund for cancellations less than 60 days before check-in.
             <br />
             <span css={primaryBrandHeadingStyles}>*</span>
             <sub>Any transaction fees will be deducted from reimbursements</sub>
