@@ -273,14 +273,14 @@ export const BookingYourStay = () => {
 
           <div css={infoTitleStyles}>Arrival/Departure times</div>
           <p css={infoBodyStyles}>
-            <strong>Check in time 2pm</strong>
+            <strong>Check in time 4pm</strong>
             <br />
             <strong>Check out time 11am</strong>
             <br />
             If you need to come earlier or leave later let us know and we’ll see
             what we can do.
           </p>
-          <div css={infoTitleStyles}>Deposits & Payment</div>
+          <div css={infoTitleStyles}>Payment</div>
           <p css={infoBodyStyles}>Full payment is required on booking.</p>
           <div css={infoTitleStyles}>Cancellations*</div>
           <p css={infoBodyStyles}>
