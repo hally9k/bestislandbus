@@ -43,11 +43,11 @@ export const FindingUs = () =>
   <div css={mapContainerStyles}>
   <div>
     <a href="https://goo.gl/maps/8hjrQeo9gzhoay5G7">
-      <StaticImage src="../images/map.jpg" alt="map" css={mapStyles} />
+      <StaticImage src="../images/map.png" alt="map" css={mapStyles} />
     </a>
     </div>
     <div>
-      <p css={directionsStyle}>Ignore the NO ENTRY sign then follow the orange signs</p>
+      <p css={directionsStyle}>Follow the orange signs</p>
     </div>
   </div>
 </section>

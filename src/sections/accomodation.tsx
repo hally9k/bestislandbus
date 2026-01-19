@@ -59,7 +59,7 @@ that has been lovingly modernised. We have endeavoured to combine comfortable an
 <h1 css={primaryBrandHeadingStyles}>cosy... secluded... and surprisingly spacious</h1>
 The bus is situated at the end of our large garden in a secluded corner with its own private lawn. There is a large deck outside for breakfast al fresco with numerous cushions and loungers for those lazy evenings. A generous bathroom and laundry that is separate from the bus but easily accessed by a corridor. A fully fitted kitchen looks out over the garden. A queen bed with cotton sheets. At one end there is a large sofa where you can chill out and watch the herons and kingfishers.
 <br /><br />We have chosen not to have a TV but provide an i-pad with an assortment of films and documentaries. The i-pad also has information on what to do and where to eat out in the area.
-<br /><br />A continental breakfast is provided during your stay. <br /><br />The Best Island Bus sleeps two comfortably.
+<br /><br />The Best Island Bus sleeps two comfortably.
       </p>
     </section>
     <aside css={asideStyles}>
